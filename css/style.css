@@ -1,0 +1,77 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,300,700,900);
+
+body {
+    font-family: "Lato";
+    font-weight: 300;
+    font-size: 14px;
+    color: #333;
+    background: #fff;
+  	width: 100%;
+  	line-height: 1.42857143;
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+    margin: 0;
+    -webkit-animation-name: fade-in;
+    -webkit-animation-duration: 1.5s;
+    /*margin-top: 70px;*/
+    overflow: none;
+}
+
+#main-container{
+	width: 50%;
+	margin-top: 50px; 
+}
+
+@media(max-width:767px){
+	#main-container{
+		width: 100%;
+	}
+}
+
+.title-section{
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	font-weight: 400;
+	border:1px solid #B9B9B9;
+	max-height: 37px;
+}
+
+.title-section-span{
+	text-align: center;
+}
+.title-section:hover{
+	text-decoration: none;
+}
+
+.accordion-group{
+	margin-bottom: 5px;
+}
+
+.accordion-group a{
+	text-decoration: none;
+}
+
+.title-not-active{
+	background-color: #f7f7f7;
+	color: #333;
+}
+
+.title-terminar-pedido{
+	background-color: #4d92ef;
+	color: #fff;
+	font-weight: 600;
+}
+
+.angle-down-icon{
+	position: relative;
+	left: 90%;
+	bottom: 20px;
+	display: inline;
+}
+
+.panel-heading {
+    cursor: pointer;
+}
