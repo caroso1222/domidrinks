@@ -118,6 +118,9 @@ body {
     cursor:pointer;
 }
 
+
+
+
 .panel-trago-title-div{
   text-align: center;
 }
@@ -161,8 +164,6 @@ body {
     color: inherit;
     font-weight: inherit;
     font-size: 15px;
-    
-    
 }
 
 .panel-heading .angle-cart-icon{
@@ -194,6 +195,14 @@ body {
     padding-right: 9px;
     color: #333;
     background-color: #8FFF91;
+}
+
+@media(max-width:480px){
+.panel-trago-title .angle-cart-icon{
+    right: 5.4%;
+}
+
+
 }
 
 
