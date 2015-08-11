@@ -1,127 +1,297 @@
 <!DOCTYPE html>
 <html lang = "en">
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Domi Drinks">
-	<meta name="author" content="Domi Drinks">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Domi Drinks">
+  <meta name="author" content="Domi Drinks">
 
-	<title>Domi Drinks</title>
+  <title>Domi Drinks</title>
 
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
 
-	<!-- Custom styles for this template -->
-	<link href="css/style.css" rel="stylesheet">
-	<link rel="stylesheet" href="css/pe-icon-7-stroke.css">
+  <!-- Custom styles for this template -->
+  <link href="css/style2.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/pe-icon-7-stroke.css">
+  <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 </head>
 
 <body>
+  <div ng-app="domiapp" ng-controller="domictrl">
+    <div class = "container">
+      <div class = "div-upper-bar">
+        <div class = "row">
+          <div class = "col-xs-6">
+            <span class = "brand-title">Domidrinks</span>
+          </div>
+          <div class = "col-xs-6 div-total">
+            <span class = "lbl-total">Total</span>
+            <span class = "val-total">${{total}}</span>
+          </div>
+        </div>
+      </div>
+      <div class = "panel-resumen" ng-show = "show_cart()">
+                  <div class = "panel-resumen-title">
+                    <div>
+                      <a >Resumen de tu pedido</a>
+                    </div>
+                    <div class = "angle-plus-icon">
+                      <span class = "fa fa-shopping-cart"></span>
+                    </div>
+                  </div>
+                  <div class = "body-resumen" >
+                    <span ng-show="cant_chivas>0"> {{cant_chivas}} botella(s) de Chivas de $120.000</span>
+                  </div>
+                </div>
+    </div>
 
+    <div class = "container" id = "main-container">
+      <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+          <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" data-target="#collapseOne">
+            <div>
+              <h4 class="panel-title">
+                <a class="accordion-toggle">
+                  Aguardiente
+                </a>
+              </h4>
+            </div>
+            <div class = "angle-down-icon">
+              <span class = "fa fa-angle-down"></span>
+            </div>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse">
+            <div class="panel-body">
+              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" data-target="#collapseTwo">
+            <div>
+              <h4 class="panel-title">
+                <a class="accordion-toggle">
+                  Whiskey
+                </a>
+              </h4>
+            </div>
+            <div class = "angle-down-icon">
+              <span class = "fa fa-angle-down"></span>
+            </div>
+            <div class = "angle-cart-icon " ng-show = "cant_chivas+cant_buchanan+cant_jack+cant_oldparr+cant_redlabel > 0">
+              <span class = "fa fa-shopping-cart"></span>
+            </div>
+          </div>
+          <div id="collapseTwo" class="panel-collapse collapse">
+            <div class="panel-body">
 
+              <div class="panel-group" id = "accordion1"> 
+                <div class = "panel panel-default panel-trago" id = "chivas">
+                  <div class = "panel-trago-title" data-toggle="collapse" data-parent="#accordion1" data-target="#collapse-1-one">
+                    <div class = "panel-trago-title-div">
+                      <a >Chivas</a>
+                    </div>
+                    <div class = "angle-plus-icon">
+                      <span>+</span>
+                    </div>
+                    <div class = "angle-cart-icon" ng-show = "cant_chivas > 0">
+                      <span class = "fa fa-shopping-cart"></span>
+                    </div>
+                  </div>
+                  <div id="collapse-1-one" class="panel-collapse collapse">
+                    <div class="panel-trago-body">
+                      <div class = "content-trago">
+                        <div class = "row">
+                          <div class = "col-xs-6 licor-left">
+                            <span class = "tamanio-licor">Botella</span>
+                            <span class = "precio-licor">$120.000</span>
+                          </div>
+                          <div class = "col-xs-6 licor-right">
+                            <span class = "tamanio-licor">Cantidad</span>
+                            <div class="div-cantidad">
+                              <input type = "submit" class="button btn-quantity btn-left" value = "&#xf104;" ng-click="decrease_cant('cant_chivas')"></input><div class="text-quantity">{{cant_chivas}}</div><input type = "submit" class="button btn-quantity btn-right" value = "&#xf105;" ng-click="increase_cant('cant_chivas')"></input>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class = "panel panel-default panel-trago">
+                  <div class = "panel-trago-title" data-toggle="collapse" data-parent="#accordion1" data-target="#collapse-1-two">
+                    <div class = "panel-trago-title-div">
+                      <a >Buchanan's</a>
+                    </div>
+                    <div class = "angle-plus-icon">
+                      <span>+</span>
+                    </div>
+                    <div class = "angle-cart-icon" ng-show = "cant_buchanan > 0">
+                      <span class = "fa fa-shopping-cart"></span>
+                    </div>
+                  </div>
+                  <div id="collapse-1-two" class="panel-collapse collapse">
+                    <div class="panel-trago-body">
+                      <div class = "content-trago">
+                        <div class = "row">
+                          <div class = "col-xs-6 licor-left">
+                            <span class = "tamanio-licor">Botella</span>
+                            <span class = "precio-licor">$120.000</span>
+                          </div>
+                          <div class = "col-xs-6 licor-right">
+                            <span class = "tamanio-licor">Cantidad</span>
+                            <div class="div-cantidad">
+                              <input type = "submit" class="button btn-quantity btn-left" value = "&#xf104;" ng-click="decrease_cant('cant_buchanan')"></input><div class="text-quantity">{{cant_buchanan}}</div><input type = "submit" class="button btn-quantity btn-right" value = "&#xf105;" ng-click="increase_cant('cant_buchanan')"></input>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class = "panel panel-default panel-trago">
+                  <div class = "panel-trago-title" data-toggle="collapse" data-parent="#accordion1" data-target="#collapse-1-three">
+                    <div class = "panel-trago-title-div">
+                      <a >Jack Daniel's</a>
+                    </div>
+                    <div class = "angle-plus-icon">
+                      <span>+</span>
+                    </div>
+                    <div class = "angle-cart-icon" ng-show = "cant_jack > 0">
+                      <span class = "fa fa-shopping-cart"></span>
+                    </div>
+                  </div>
+                  <div id="collapse-1-three" class="panel-collapse collapse">
+                    <div class="panel-trago-body">
+                      <div class = "content-trago">
+                        <div class = "row">
+                          <div class = "col-xs-6 licor-left">
+                            <span class = "tamanio-licor">Botella</span>
+                            <span class = "precio-licor">$120.000</span>
+                          </div>
+                          <div class = "col-xs-6 licor-right">
+                            <span class = "tamanio-licor">Cantidad</span>
+                            <div class="div-cantidad">
+                              <input type = "submit" class="button btn-quantity btn-left" value = "&#xf104;" ng-click="decrease_cant('cant_jack')"></input><div class="text-quantity">{{cant_jack}}</div><input type = "submit" class="button btn-quantity btn-right" value = "&#xf105;" ng-click="increase_cant('cant_jack')"></input>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class = "panel panel-default panel-trago">
+                  <div class = "panel-trago-title" data-toggle="collapse" data-parent="#accordion1" data-target="#collapse-1-four">
+                    <div class = "panel-trago-title-div">
+                      <a >Oldparr</a>
+                    </div>
+                    <div class = "angle-plus-icon">
+                      <span>+</span>
+                    </div>
+                    <div class = "angle-cart-icon" ng-show = "cant_oldparr > 0">
+                      <span class = "fa fa-shopping-cart"></span>
+                    </div>
+                  </div>
+                  <div id="collapse-1-four" class="panel-collapse collapse">
+                    <div class="panel-trago-body">
+                      <div class = "content-trago">
+                        <div class = "row">
+                          <div class = "col-xs-6 licor-left">
+                            <span class = "tamanio-licor">Botella</span>
+                            <span class = "precio-licor">$120.000</span>
+                          </div>
+                          <div class = "col-xs-6 licor-right">
+                            <span class = "tamanio-licor">Cantidad</span>
+                            <div class="div-cantidad">
+                              <input type = "submit" class="button btn-quantity btn-left" value = "&#xf104;" ng-click="decrease_cant('cant_oldparr')"></input><div class="text-quantity">{{cant_oldparr}}</div><input type = "submit" class="button btn-quantity btn-right" value = "&#xf105;" ng-click="increase_cant('cant_oldparr')"></input>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class = "panel panel-default panel-trago">
+                  <div class = "panel-trago-title" data-toggle="collapse" data-parent="#accordion1" data-target="#collapse-1-five">
+                    <div class = "panel-trago-title-div">
+                      <a >Red Label</a>
+                    </div>
+                    <div class = "angle-plus-icon">
+                      <span>+</span>
+                    </div>
+                    <div class = "angle-cart-icon" ng-show = "cant_redlabel > 0">
+                      <span class = "fa fa-shopping-cart"></span>
+                    </div>
+                  </div>
+                  <div id="collapse-1-five" class="panel-collapse collapse">
+                    <div class="panel-trago-body">
+                      <div class = "content-trago">
+                        <div class = "row">
+                          <div class = "col-xs-6 licor-left">
+                            <span class = "tamanio-licor">Botella</span>
+                            <span class = "precio-licor">$120.000</span>
+                          </div>
+                          <div class = "col-xs-6 licor-right">
+                            <span class = "tamanio-licor">Cantidad</span>
+                            <div class="div-cantidad">
+                              <input type = "submit" class="button btn-quantity btn-left" value = "&#xf104;" ng-click="decrease_cant('cant_redlabel')"></input><div class="text-quantity">{{cant_redlabel}}</div><input type = "submit" class="button btn-quantity btn-right" value = "&#xf105;" ng-click="increase_cant('cant_redlabel')"></input>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" data-target="#collapseThree">
+            <div>
+              <h4 class="panel-title">
+                <a class="accordion-toggle">
+                  Ron
+                </a>
+              </h4>
+            </div>
+            <div class = "angle-down-icon">
+              <span class = "fa fa-angle-down"></span>
+            </div>
+          </div>
+          <div id="collapseThree" class="panel-collapse collapse">
+            <div class="panel-body">
+              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default panel-pedido">
+          <div class="panel-heading panel-terminar-pedido" data-toggle="collapse" data-parent="#accordion" data-target="#collapseFour">
+            <div>
+              <h4 class="panel-title">
+                <a class="accordion-toggle title-terminar-pedido">
+                  Terminar pedido
+                </a>
+              </h4>
+            </div>
+            <div class = "angle-down-icon">
+              <span class = "fa fa-angle-down"></span>
+            </div>
+          </div>
+          <div id="collapseFour" class="panel-collapse collapse">
+            <div class="panel-body">
+              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-	<div class = "container" id = "main-container">
-		<div class="accordion" id="accordion2">
-			<div class="accordion-group">
-				<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-					<div class="title-section title-not-active">
-						<div class = "title-section-span">
-							<span>
-								Aguardiente
-							</span>
-						</div>
-						<div class = "angle-down-icon">
-							<span class = "fa fa-angle-down"></span>
-						</div>
-					</div>
-				</a>
-				<div id="collapseOne" class="accordion-body collapse">
-					<div class="accordion-inner">
-						Anim pariatur cliche...
-					</div>
-				</div>
-			</div>
-			<div class="accordion-group">
-				<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-					<div class="title-section title-not-active">
-						<div class = "title-section-span">
-							<span>
-								Whiskey
-							</span>
-						</div>
-						<div class = "angle-down-icon">
-							<span class = "fa fa-angle-down"></span>
-						</div>
-					</div>
-				</a>
-				<div id="collapseTwo" class="accordion-body collapse">
-					<div class="accordion-inner">
-						Anim pariatur cliche...
-					</div>
-				</div>
-			</div>
-			<div class="accordion-group">
-				<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
-					<div class="title-section title-not-active">
-						<div class = "title-section-span">
-							<span>
-								Ron
-							</span>
-						</div>
-						<div class = "angle-down-icon">
-							<span class = "fa fa-angle-down"></span>
-						</div>
-					</div>
-				</a>
-				<div id="collapseThree" class="accordion-body collapse">
-					<div class="accordion-inner">
-						Anim pariatur cliche...
-					</div>
-				</div>
-			</div>
-			<div class="accordion-group">
-				<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">
-					<div class="title-section title-not-active">
-						<div class = "title-section-span">
-							<span>
-								Cerveza
-							</span>
-						</div>
-						<div class = "angle-down-icon">
-							<span class = "fa fa-angle-down"></span>
-						</div>
-					</div>
-				</a>
-				<div id="collapseFour" class="accordion-body collapse">
-					<div class="accordion-inner">
-						Anim pariatur cliche...
-					</div>
-				</div>
-			</div>
-			<div class="accordion-group">
-				<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapsePedido">
-					<div class="title-section title-terminar-pedido">
-						<div class = "title-section-span">
-							<span>
-								Terminar pedido
-							</span>
-						</div>
-						<div class = "angle-down-icon">
-							<span class = "fa fa-angle-down"></span>
-						</div>
-					</div>
-				</a>
-				<div id="collapsePedido" class="accordion-body collapse">
-					<div class="accordion-inner">
-						Anim pariatur cliche...
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+  <!-- Javascript -->
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src= "js/interaction.js"></script>
 
-	<!-- Javascript -->
-	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/script.js"></script>
 </body>
 </html>
