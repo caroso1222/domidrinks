@@ -339,7 +339,7 @@ a:focus {
 @media(max-width:480px){
 
 .text-quantity{
-    width: 30px;
+    width: 33px;
     padding-bottom: 5px;
     padding-top: 3px;
   }
@@ -385,17 +385,17 @@ text-align: center;
   display: block;
   padding-top: 10px;
   padding-bottom: 10px;
-  border-left: 7px solid #8FFF91;
-  border-bottom: 7px solid #8FFF91;
-  border-right: 7px solid #8FFF91;
-  color: #8FFF91;
+  border-left: 7px solid #474747;
+  border-bottom: 7px solid #474747;
+  border-right: 7px solid #474747;
+  color: #333;
   font-weight: 400;
   font-size: 15px;
 }
 
 .panel-resumen-title{
-  background-color: #8FFF91;
-  color: #ffffff;
+  background-color: #474747;
+  color: #8FFF91;
   cursor: pointer;
   padding-top: 8px;
   padding-bottom: 10px;
