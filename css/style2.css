@@ -213,6 +213,8 @@ body {
     color: #333;
 }
 
+
+
 .licor-left{
     padding-left: 5%;
 }
@@ -220,6 +222,19 @@ body {
 .licor-right{
     padding-top: 1px;
     padding-left: 10%;
+}
+
+@media(max-width:480px){
+  .precio-licor{
+    font-size: 26px;
+  }
+
+  .licor-right{
+    padding-top: 1px;
+    padding-left: 6%;
+  }
+
+
 }
 
 .button {
@@ -304,6 +319,22 @@ a:focus {
   -moz-box-shadow: none !important;
   box-shadow: none !important;
 }
+
+@media(max-width:480px){
+
+.text-quantity{
+    width: 30px !important;
+  }
+
+  .button.btn-quantity.btn-left{
+    width: 33px;
+  }
+
+  .button.btn-quantity.btn-right{
+    width: 33px;
+  }
+}
+
 
 .text-quantity {
   display: inline-block;
