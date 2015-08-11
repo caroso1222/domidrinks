@@ -26,7 +26,7 @@
           </div>
           <div class = "col-xs-6 div-total">
             <span class = "lbl-total">Total</span>
-            <span class = "val-total">${{cant_chivas*precio_chivas+cant_buchanan*precio_buchanan+cant_jack*precio_jack+cant_oldparr*precio_oldparr+cant_redlabel*precio_redlabel}}</span>
+            <span class = "val-total">${{total}}</span>
           </div>
         </div>
       </div>
@@ -78,7 +78,7 @@
             <div class = "angle-down-icon">
               <span class = "fa fa-angle-down"></span>
             </div>
-            <div class = "angle-cart-icon">
+            <div class = "angle-cart-icon " ng-show = "cant_chivas+cant_buchanan+cant_jack+cant_oldparr+cant_redlabel > 0">
               <span class = "fa fa-shopping-cart"></span>
             </div>
           </div>
@@ -88,7 +88,7 @@
               <div class="panel-group" id = "accordion1"> 
                 <div class = "panel panel-default panel-trago" id = "chivas">
                   <div class = "panel-trago-title" data-toggle="collapse" data-parent="#accordion1" data-target="#collapse-1-one">
-                    <div>
+                    <div class = "panel-trago-title-div">
                       <a >Chivas</a>
                     </div>
                     <div class = "angle-plus-icon">
@@ -119,11 +119,14 @@
                 </div>
                 <div class = "panel panel-default panel-trago">
                   <div class = "panel-trago-title" data-toggle="collapse" data-parent="#accordion1" data-target="#collapse-1-two">
-                    <div>
+                    <div class = "panel-trago-title-div">
                       <a >Buchanan's</a>
                     </div>
                     <div class = "angle-plus-icon">
                       <span>+</span>
+                    </div>
+                    <div class = "angle-cart-icon" ng-show = "cant_buchanan > 0">
+                      <span class = "fa fa-shopping-cart"></span>
                     </div>
                   </div>
                   <div id="collapse-1-two" class="panel-collapse collapse">
@@ -137,7 +140,7 @@
                           <div class = "col-xs-6 licor-right">
                             <span class = "tamanio-licor">Cantidad</span>
                             <div class="div-cantidad">
-                              <input type = "submit" class="button btn-quantity btn-left" value = "&#xf104;" ng-click="decrease_cant('cant_buchanan')"></input><div class="text-quantity">{{cant_buchanan}}</div><input type = "submit" class="button btn-quantity btn-right" value = "&#xf105;" ng-click="cant_buchanan = cant_buchanan + 1"></input>
+                              <input type = "submit" class="button btn-quantity btn-left" value = "&#xf104;" ng-click="decrease_cant('cant_buchanan')"></input><div class="text-quantity">{{cant_buchanan}}</div><input type = "submit" class="button btn-quantity btn-right" value = "&#xf105;" ng-click="increase_cant('cant_buchanan')"></input>
                             </div>
                           </div>
                         </div>
@@ -147,11 +150,14 @@
                 </div>
                 <div class = "panel panel-default panel-trago">
                   <div class = "panel-trago-title" data-toggle="collapse" data-parent="#accordion1" data-target="#collapse-1-three">
-                    <div>
+                    <div class = "panel-trago-title-div">
                       <a >Jack Daniel's</a>
                     </div>
                     <div class = "angle-plus-icon">
                       <span>+</span>
+                    </div>
+                    <div class = "angle-cart-icon" ng-show = "cant_jack > 0">
+                      <span class = "fa fa-shopping-cart"></span>
                     </div>
                   </div>
                   <div id="collapse-1-three" class="panel-collapse collapse">
@@ -165,7 +171,7 @@
                           <div class = "col-xs-6 licor-right">
                             <span class = "tamanio-licor">Cantidad</span>
                             <div class="div-cantidad">
-                              <input type = "submit" class="button btn-quantity btn-left" value = "&#xf104;" ng-click="decrease_cant('cant_jack')"></input><div class="text-quantity">{{cant_jack}}</div><input type = "submit" class="button btn-quantity btn-right" value = "&#xf105;" ng-click="cant_jack = cant_jack + 1"></input>
+                              <input type = "submit" class="button btn-quantity btn-left" value = "&#xf104;" ng-click="decrease_cant('cant_jack')"></input><div class="text-quantity">{{cant_jack}}</div><input type = "submit" class="button btn-quantity btn-right" value = "&#xf105;" ng-click="increase_cant('cant_jack')"></input>
                             </div>
                           </div>
                         </div>
@@ -175,11 +181,14 @@
                 </div>
                 <div class = "panel panel-default panel-trago">
                   <div class = "panel-trago-title" data-toggle="collapse" data-parent="#accordion1" data-target="#collapse-1-four">
-                    <div>
+                    <div class = "panel-trago-title-div">
                       <a >Oldparr</a>
                     </div>
                     <div class = "angle-plus-icon">
                       <span>+</span>
+                    </div>
+                    <div class = "angle-cart-icon" ng-show = "cant_oldparr > 0">
+                      <span class = "fa fa-shopping-cart"></span>
                     </div>
                   </div>
                   <div id="collapse-1-four" class="panel-collapse collapse">
@@ -193,7 +202,7 @@
                           <div class = "col-xs-6 licor-right">
                             <span class = "tamanio-licor">Cantidad</span>
                             <div class="div-cantidad">
-                              <input type = "submit" class="button btn-quantity btn-left" value = "&#xf104;" ng-click="decrease_cant('cant_oldparr')"></input><div class="text-quantity">{{cant_oldparr}}</div><input type = "submit" class="button btn-quantity btn-right" value = "&#xf105;" ng-click="cant_oldparr = cant_oldparr + 1"></input>
+                              <input type = "submit" class="button btn-quantity btn-left" value = "&#xf104;" ng-click="decrease_cant('cant_oldparr')"></input><div class="text-quantity">{{cant_oldparr}}</div><input type = "submit" class="button btn-quantity btn-right" value = "&#xf105;" ng-click="increase_cant('cant_oldparr')"></input>
                             </div>
                           </div>
                         </div>
@@ -203,11 +212,14 @@
                 </div>
                 <div class = "panel panel-default panel-trago">
                   <div class = "panel-trago-title" data-toggle="collapse" data-parent="#accordion1" data-target="#collapse-1-five">
-                    <div>
+                    <div class = "panel-trago-title-div">
                       <a >Red Label</a>
                     </div>
                     <div class = "angle-plus-icon">
                       <span>+</span>
+                    </div>
+                    <div class = "angle-cart-icon" ng-show = "cant_redlabel > 0">
+                      <span class = "fa fa-shopping-cart"></span>
                     </div>
                   </div>
                   <div id="collapse-1-five" class="panel-collapse collapse">
@@ -221,7 +233,7 @@
                           <div class = "col-xs-6 licor-right">
                             <span class = "tamanio-licor">Cantidad</span>
                             <div class="div-cantidad">
-                              <input type = "submit" class="button btn-quantity btn-left" value = "&#xf104;" ng-click="decrease_cant('cant_redlabel')"></input><div class="text-quantity">{{cant_redlabel}}</div><input type = "submit" class="button btn-quantity btn-right" value = "&#xf105;" ng-click="cant_redlabel = cant_redlabel + 1"></input>
+                              <input type = "submit" class="button btn-quantity btn-left" value = "&#xf104;" ng-click="decrease_cant('cant_redlabel')"></input><div class="text-quantity">{{cant_redlabel}}</div><input type = "submit" class="button btn-quantity btn-right" value = "&#xf105;" ng-click="increase_cant('cant_redlabel')"></input>
                             </div>
                           </div>
                         </div>

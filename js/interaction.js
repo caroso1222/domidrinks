@@ -9,22 +9,31 @@ angular.module('domiapp', []).controller('domictrl', function($scope) {
 	$scope.cant_jack=0;
 	$scope.cant_oldparr=0;
 	$scope.cant_redlabel=0;
+	$scope.total = $scope.cant_chivas*$scope.precio_chivas+$scope.cant_buchanan*$scope.precio_buchanan+$scope.cant_jack*$scope.precio_jack+$scope.cant_oldparr*$scope.precio_oldparr+$scope.cant_redlabel*$scope.precio_redlabel;
+	//$scope.total = $scope.cant_chivas*$scope.precio_chivas+$scope.cant_buchanan*$scope.precio_buchanan;
 
 	$scope.decrease_cant = function(licor){
+		eldiv = licor.split("_");
+		elprecio = "precio_"+eldiv[1];
 		if($scope[licor] == 1){
 			$scope[licor] = $scope[licor] - 1;
-			eldiv = licor.split("_");
+
+			$scope.total = $scope.total - $scope[elprecio];
 			eldiv = $('#'+eldiv[1]);
 			eldiv.css('background-color','#ffffff');
 		}else if($scope[licor] > 0){
 			$scope[licor] = $scope[licor] - 1;
+			$scope.total = $scope.total - $scope[elprecio];
 		}
 	}
 
 	$scope.increase_cant = function(licor){
 		$scope[licor] = $scope[licor] + 1;
 		eldiv = licor.split("_");
+		elprecio = "precio_"+eldiv[1];
 		eldiv = $('#'+eldiv[1]);
+		$scope.total = $scope.total + $scope[elprecio];
+		
 		//eldiv.css('background-color','#8FFF91');
 		eldiv.find('.text-quantity').css('color','#000000');
 	}
