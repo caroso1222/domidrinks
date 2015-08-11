@@ -268,7 +268,7 @@ a:focus {
 .button.btn-quantity.btn-right {
   width: 36px;
   border-style: solid solid solid none;
-  border-color: #686868;
+  border-color: #333;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
   padding-top: 4px;
@@ -281,7 +281,7 @@ a:focus {
 .button.btn-quantity.btn-left {
   width: 36px;
   border-style: solid none solid solid;
-  border-color: #686868;
+  border-color: #333;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
   padding-top: 4px;
@@ -330,8 +330,8 @@ a:focus {
   margin-left: 0px;
   padding-top: 4px;
   padding-bottom: 4px;
-  border: 1px solid #686868;
-  color: #686868;
+  border: 1px solid #333;
+  color: #333;
   text-align: center;
   font-weight: 400;
 }
