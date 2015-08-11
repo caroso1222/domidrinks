@@ -320,20 +320,7 @@ a:focus {
   box-shadow: none !important;
 }
 
-@media(max-width:480px){
 
-.text-quantity{
-    width: 30px !important;
-  }
-
-  .button.btn-quantity.btn-left{
-    width: 33px;
-  }
-
-  .button.btn-quantity.btn-right{
-    width: 33px;
-  }
-}
 
 
 .text-quantity {
@@ -347,6 +334,22 @@ a:focus {
   color: #686868;
   text-align: center;
   font-weight: 400;
+}
+
+@media(max-width:480px){
+
+.text-quantity{
+    width: 30px !important;
+    padding-bottom: 5px;
+  }
+
+  .button.btn-quantity.btn-left{
+    width: 33px;
+  }
+
+  .button.btn-quantity.btn-right{
+    width: 33px;
+  }
 }
 
 .div-total{
