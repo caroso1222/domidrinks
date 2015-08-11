@@ -339,8 +339,9 @@ a:focus {
 @media(max-width:480px){
 
 .text-quantity{
-    width: 30px !important;
+    width: 30px;
     padding-bottom: 5px;
+    padding-top: 3px;
   }
 
   .button.btn-quantity.btn-left{
