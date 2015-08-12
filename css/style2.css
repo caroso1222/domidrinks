@@ -425,3 +425,7 @@ a:focus {
 .panel-resumen-title a{
   text-transform: uppercase;
 }
+
+.item-resumen{
+  display: block;
+}

@@ -4,6 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Domi Drinks">
   <meta name="author" content="Domi Drinks">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
   <title>Domi Drinks</title>
 
@@ -39,8 +40,9 @@
             <span class = "fa fa-shopping-cart"></span>
           </div>
         </div>
-        <div class = "body-resumen" >
-          <span ng-show="cant_chivas>0"> {{cant_chivas}} botella(s) de Chivas de $120.000</span>
+        <div class = "body-resumen" ng-repeat="item in pedido">
+          <span ng-show="cant_chivas>0" class = "item-resumen"> {{cant_chivas}} botella(s) de Chivas de $120.000</span>
+          <span><b>{{item.cant}}</b> {{item.item.tamanio}} de <b>{{item.item.nombre}}</b> de ${{item.item.precio}}</span>
         </div>
       </div>
     </div>
@@ -78,38 +80,37 @@
             <div class = "angle-down-icon">
               <span class = "fa fa-angle-down"></span>
             </div>
-            <div class = "angle-cart-icon " ng-show = "cant_chivas+cant_buchanan+cant_jack+cant_oldparr+cant_redlabel > 0">
+            <div class = "angle-cart-icon " ng-show = "getSumOfArray(getWhiskys())">
               <span class = "fa fa-shopping-cart"></span>
             </div>
           </div>
           <div id="collapseTwo" class="panel-collapse collapse">
             <div class="panel-body">
-
               <div class="panel-group" id = "accordion1"> 
-                <div class = "panel panel-default panel-trago" id = "chivas">
-                  <div class = "panel-trago-title" data-toggle="collapse" data-parent="#accordion1" data-target="#collapse-1-one">
+                <div class = "panel panel-default panel-trago" ng-repeat = "item in getWhiskys()">
+                  <div class = "panel-trago-title" data-toggle="collapse" data-parent="#accordion1" data-target="#collapse-1-{{item.id}}">
                     <div class = "panel-trago-title-div">
-                      <a >Chivas</a>
+                      <a >{{item.nombre}}</a>
                     </div>
                     <div class = "angle-plus-icon">
                       <span>+</span>
                     </div>
-                    <div class = "angle-cart-icon" ng-show = "cant_chivas > 0">
+                    <div class = "angle-cart-icon" ng-show = "getQuantityInPedido(item.id) > 0">
                       <span class = "fa fa-shopping-cart"></span>
                     </div>
                   </div>
-                  <div id="collapse-1-one" class="panel-collapse collapse">
+                  <div id="collapse-1-{{item.id}}" class="panel-collapse collapse">
                     <div class="panel-trago-body">
                       <div class = "content-trago">
                         <div class = "row">
                           <div class = "col-xs-6 licor-left">
-                            <span class = "tamanio-licor">Botella</span>
-                            <span class = "precio-licor">$120.000</span>
+                            <span class = "tamanio-licor">{{item.tamanio}}</span>
+                            <span class = "precio-licor">${{item.precio}}</span>
                           </div>
                           <div class = "col-xs-6 licor-right">
                             <span class = "tamanio-licor">Cantidad</span>
                             <div class="div-cantidad">
-                              <input type = "submit" class="button btn-quantity btn-left" value = "&#xf104;" ng-click="decrease_cant('cant_chivas')"></input><div class="text-quantity">{{cant_chivas}}</div><input type = "submit" class="button btn-quantity btn-right" value = "&#xf105;" ng-click="increase_cant('cant_chivas')"></input>
+                              <input type = "submit" class="button btn-quantity btn-left" value = "&#xf104;" ng-click="decrease_cant(item.id)"></input><div class="text-quantity">{{getQuantityInPedido(item.id)}}</div><input type = "submit" class="button btn-quantity btn-right" value = "&#xf105;" ng-click="increase_cant(item.id)"></input>
                             </div>
                           </div>
                         </div>
@@ -117,130 +118,7 @@
                     </div>
                   </div>
                 </div>
-                <div class = "panel panel-default panel-trago">
-                  <div class = "panel-trago-title" data-toggle="collapse" data-parent="#accordion1" data-target="#collapse-1-two">
-                    <div class = "panel-trago-title-div">
-                      <a >Buchanan's</a>
-                    </div>
-                    <div class = "angle-plus-icon">
-                      <span>+</span>
-                    </div>
-                    <div class = "angle-cart-icon" ng-show = "cant_buchanan > 0">
-                      <span class = "fa fa-shopping-cart"></span>
-                    </div>
-                  </div>
-                  <div id="collapse-1-two" class="panel-collapse collapse">
-                    <div class="panel-trago-body">
-                      <div class = "content-trago">
-                        <div class = "row">
-                          <div class = "col-xs-6 licor-left">
-                            <span class = "tamanio-licor">Botella</span>
-                            <span class = "precio-licor">$120.000</span>
-                          </div>
-                          <div class = "col-xs-6 licor-right">
-                            <span class = "tamanio-licor">Cantidad</span>
-                            <div class="div-cantidad">
-                              <input type = "submit" class="button btn-quantity btn-left" value = "&#xf104;" ng-click="decrease_cant('cant_buchanan')"></input><div class="text-quantity">{{cant_buchanan}}</div><input type = "submit" class="button btn-quantity btn-right" value = "&#xf105;" ng-click="increase_cant('cant_buchanan')"></input>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class = "panel panel-default panel-trago">
-                  <div class = "panel-trago-title" data-toggle="collapse" data-parent="#accordion1" data-target="#collapse-1-three">
-                    <div class = "panel-trago-title-div">
-                      <a >Jack Daniel's</a>
-                    </div>
-                    <div class = "angle-plus-icon">
-                      <span>+</span>
-                    </div>
-                    <div class = "angle-cart-icon" ng-show = "cant_jack > 0">
-                      <span class = "fa fa-shopping-cart"></span>
-                    </div>
-                  </div>
-                  <div id="collapse-1-three" class="panel-collapse collapse">
-                    <div class="panel-trago-body">
-                      <div class = "content-trago">
-                        <div class = "row">
-                          <div class = "col-xs-6 licor-left">
-                            <span class = "tamanio-licor">Botella</span>
-                            <span class = "precio-licor">$120.000</span>
-                          </div>
-                          <div class = "col-xs-6 licor-right">
-                            <span class = "tamanio-licor">Cantidad</span>
-                            <div class="div-cantidad">
-                              <input type = "submit" class="button btn-quantity btn-left" value = "&#xf104;" ng-click="decrease_cant('cant_jack')"></input><div class="text-quantity">{{cant_jack}}</div><input type = "submit" class="button btn-quantity btn-right" value = "&#xf105;" ng-click="increase_cant('cant_jack')"></input>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class = "panel panel-default panel-trago">
-                  <div class = "panel-trago-title" data-toggle="collapse" data-parent="#accordion1" data-target="#collapse-1-four">
-                    <div class = "panel-trago-title-div">
-                      <a >Oldparr</a>
-                    </div>
-                    <div class = "angle-plus-icon">
-                      <span>+</span>
-                    </div>
-                    <div class = "angle-cart-icon" ng-show = "cant_oldparr > 0">
-                      <span class = "fa fa-shopping-cart"></span>
-                    </div>
-                  </div>
-                  <div id="collapse-1-four" class="panel-collapse collapse">
-                    <div class="panel-trago-body">
-                      <div class = "content-trago">
-                        <div class = "row">
-                          <div class = "col-xs-6 licor-left">
-                            <span class = "tamanio-licor">Botella</span>
-                            <span class = "precio-licor">$120.000</span>
-                          </div>
-                          <div class = "col-xs-6 licor-right">
-                            <span class = "tamanio-licor">Cantidad</span>
-                            <div class="div-cantidad">
-                              <input type = "submit" class="button btn-quantity btn-left" value = "&#xf104;" ng-click="decrease_cant('cant_oldparr')"></input><div class="text-quantity">{{cant_oldparr}}</div><input type = "submit" class="button btn-quantity btn-right" value = "&#xf105;" ng-click="increase_cant('cant_oldparr')"></input>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class = "panel panel-default panel-trago">
-                  <div class = "panel-trago-title" data-toggle="collapse" data-parent="#accordion1" data-target="#collapse-1-five">
-                    <div class = "panel-trago-title-div">
-                      <a >Red Label</a>
-                    </div>
-                    <div class = "angle-plus-icon">
-                      <span>+</span>
-                    </div>
-                    <div class = "angle-cart-icon" ng-show = "cant_redlabel > 0">
-                      <span class = "fa fa-shopping-cart"></span>
-                    </div>
-                  </div>
-                  <div id="collapse-1-five" class="panel-collapse collapse">
-                    <div class="panel-trago-body">
-                      <div class = "content-trago">
-                        <div class = "row">
-                          <div class = "col-xs-6 licor-left">
-                            <span class = "tamanio-licor">Botella</span>
-                            <span class = "precio-licor">$120.000</span>
-                          </div>
-                          <div class = "col-xs-6 licor-right">
-                            <span class = "tamanio-licor">Cantidad</span>
-                            <div class="div-cantidad">
-                              <input type = "submit" class="button btn-quantity btn-left" value = "&#xf104;" ng-click="decrease_cant('cant_redlabel')"></input><div class="text-quantity">{{cant_redlabel}}</div><input type = "submit" class="button btn-quantity btn-right" value = "&#xf105;" ng-click="increase_cant('cant_redlabel')"></input>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+
               </div>
             </div>
           </div>
