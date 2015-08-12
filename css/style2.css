@@ -18,6 +18,10 @@ body {
     overflow: none;
 }
 
+#total-container{
+  width: 50%;
+}
+
 #main-container{
 	width: 50%;
 	margin-top: 50px; 
@@ -27,6 +31,9 @@ body {
 	#main-container{
 		width: 100%;
 	}
+  #total-container{
+  width: 100%;
+}
 }
 
 .panel-heading {
