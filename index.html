@@ -27,7 +27,7 @@
           </div>
           <div class = "col-xs-6 div-total">
             <span class = "lbl-total">Total</span>
-            <span class = "val-total">${{total}}</span>
+            <span class = "val-total">$ {{numberWithCommas(total)}}</span>
           </div>
         </div>
       </div>
@@ -42,7 +42,7 @@
         </div>
         <div class = "body-resumen" ng-repeat="item in pedido">
           <span ng-show="cant_chivas>0" class = "item-resumen"> {{cant_chivas}} botella(s) de Chivas de $120.000</span>
-          <span><b>{{item.cant}}</b> {{item.item.tamanio}} de <b>{{item.item.nombre}}</b> de ${{item.item.precio}}</span>
+          <span><b>{{item.cant}}</b> {{item.item.tamanio}} de <b>{{item.item.nombre}}</b> de ${{numberWithCommas(item.item.precio)}}</span>
         </div>
       </div>
     </div>
@@ -105,7 +105,7 @@
                         <div class = "row">
                           <div class = "col-xs-6 licor-left">
                             <span class = "tamanio-licor">{{item.tamanio}}</span>
-                            <span class = "precio-licor">${{item.precio}}</span>
+                            <span class = "precio-licor">${{numberWithCommas(item.precio)}}</span>
                           </div>
                           <div class = "col-xs-6 licor-right">
                             <span class = "tamanio-licor">Cantidad</span>

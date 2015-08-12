@@ -60,7 +60,7 @@ angular.module('domiapp', []).controller('domictrl', function($scope) {
 	{id:420, tipo:'Whisky', nombre:'Jhonnie Walker (Sello Negro)', tamanio:"Litro", precio:110000 },
 	{id:430, tipo:'Whisky', nombre:'Jhonnie Walker (Sello Rojo)', tamanio:"Botella de 750CC", precio:70000 },
 	{id:440, tipo:'Whisky', nombre:'Something Special', tamanio:"Litro", precio:70000 },
-	{id:450, tipo:'Whisky', nombre:'Chivas Regal (12 Años)', tamanio:"Botella(s) de 750CC", precio:125000 },
+	{id:450, tipo:'Whisky', nombre:'Chivas Regal (12 Años)', tamanio:"Botella de 750CC", precio:125000 },
 	{id:460, tipo:'Whisky', nombre:'Chivas Regal (18 Años)', tamanio:"Litro", precio:245000 },
 	{id:470, tipo:'Whisky', nombre:"Jack Daniel's", tamanio:"Botella de 750CC", precio:110000 },
 	{id:480, tipo:'Tequila', nombre:'Don Julio Reposado', tamanio:"Litro", precio:42000 },
@@ -181,5 +181,9 @@ angular.module('domiapp', []).controller('domictrl', function($scope) {
 				return true;
 			}
 		}
+	}
+
+	$scope.numberWithCommas = function(x){
+		return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 	}
 });
