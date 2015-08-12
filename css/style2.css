@@ -197,12 +197,16 @@ body {
     background-color: #8FFF91;
 }
 
-@media(max-width:480px){
+@media(max-width:320px){
 .panel-trago-title .angle-cart-icon{
     right: 5.4%;
 }
+}
 
-
+@media(max-width:480px){
+.panel-trago-title .angle-cart-icon{
+    right: 3.4%;
+}
 }
 
 
