@@ -385,7 +385,6 @@ a:focus {
 }
 
 .panel-resumen{
-text-align: center;
   margin-bottom: 5px;
 }
 
@@ -404,6 +403,7 @@ text-align: center;
   color: #333;
   font-weight: 400;
   font-size: 15px;
+  text-align: center;
 }
 
 .panel-resumen-title{
@@ -416,6 +416,10 @@ text-align: center;
   letter-spacing: 1px;
   font-size: 16px;
   font-weight: 700;
+}
+
+.panel-resumen-title-div{
+  text-align: center;
 }
 
 .panel-resumen-title a{
