@@ -72,7 +72,7 @@ else {
     );
 } 
 
-die(header("Location: http://www.google.com/"));
+die(header("Location: confirmacion.html"));
  /* Redirect browser */
 exit();
 
