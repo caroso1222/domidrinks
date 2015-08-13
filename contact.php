@@ -24,7 +24,7 @@ $limit_send_message = 5; // limit to send message
 $name = filter_input(INPUT_POST, 'name');
 $email = filter_input(INPUT_POST, 'cel');
 $contact_number = filter_input(INPUT_POST, 'address');
-$message = filter_input(INPUT_POST, 'message');
+$message = filter_input(INPUT_POST, 'name');
 
 if( empty($_SESSION['send_email']) ) {
     
@@ -61,7 +61,7 @@ else {
    
     // OK - send email
     $_SESSION['send_email']++;   
-    $message .= "\r\n\r\nDirección: ".$contact_number."\nCelular: ".$email."\nNombre: ".$name."\nMensaje: ".$message;
+    $message .= "\r\n\r\nDirección: ".$contact_number."\nCelular: ".$email."\nNombre: ".$name;
     $mail = mail($site_owners_email, $subject, $message, "From: " . $name . " <" . $email . ">\r\n"
             . "Reply-To: " . $email . "\r\n"
             . "X-Mailer: PHP/" . phpversion());
