@@ -5,3 +5,11 @@ $(function(){
         }, 1000);
 	});
 });
+
+$(function(){
+	$('.btn-empezar').click(function(){
+		$('html,body').animate({
+          scrollTop: 400
+        }, 1000);
+	});
+});
