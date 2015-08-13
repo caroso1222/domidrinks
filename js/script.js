@@ -1,3 +1,7 @@
-function numberWithCommas(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
+$(function(){
+	$('.panel-terminar-pedido').click(function(){
+		$('html,body').animate({
+          scrollTop: 1000
+        }, 1000);
+	});
+});

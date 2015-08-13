@@ -86,7 +86,7 @@ angular.module('domiapp', []).controller('domictrl', function($scope) {
 	{id:510, tipo:'Tequila', nombre:'José Cuero Silver', tamanio:"Botella(s)", titulo:"Botella de 750CC", precio:70000 },
 
 	{id:520, tipo:'Vodka', nombre:'Vodka Absolut', tamanio:"Botella(s)", titulo:"Botella de 750CC", precio:70000 },
-	{id:530, tipo:'Vodka', nombre:'Smirnoff Ice 275 CC', tamanio:"Botella(s)", titulo:"Botella de 750CC", precio:7000 },
+	{id:530, tipo:'Vodka', nombre:'Smirnoff Ice', tamanio:"Botella(s)", titulo:"Botella de 275CC", precio:7000 },
 	{id:540, tipo:'Vodka', nombre:'Smirnoff Red', tamanio:"Botella(s)", titulo:"Botella de 750CC", precio:70000 },
 
 	{id:550, tipo:'Otros', nombre:'Brandy Domeq', tamanio:"Botella(s)", titulo:"Botella de 750CC", precio:45000 },
