@@ -445,11 +445,25 @@ a:focus {
 
 .btn-enviar{
   text-transform: uppercase;
-  color: #8FFF91;
+  color: #333;
   font-weight: 700;
   letter-spacing: 1px;
   font-size: 14px;
-  background-color: #333;
+  background-color: #8FFF91;
   padding-top: 10px;
   padding-bottom: 28px;
+}
+
+#confirmacion-container{
+  width: 50%;
+}
+
+@media(max-width:767px){
+#confirmacion-container{
+  width: 100%;
+}
+}
+
+#confirmacion-container h1{
+  text-transform: uppercase;
 }
