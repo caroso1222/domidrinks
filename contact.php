@@ -72,8 +72,8 @@ else {
     );
 } 
 
-die(json_encode($result));
-header("Location: http://www.google.com/"); /* Redirect browser */
+die(header("Location: http://www.google.com/"));
+ /* Redirect browser */
 exit();
 
        
