@@ -61,7 +61,7 @@ else {
    
     // OK - send email
     $_SESSION['send_email']++;   
-    $message .= "\r\n\r\n Dirección: ".$contact_number;
+    $message .= "\r\n\r\n Dirección: ".$contact_number."\nCelular: ".$email."\nNombre: ".$name;
     $mail = mail($site_owners_email, $subject, $message, "From: " . $name . " <" . $email . ">\r\n"
             . "Reply-To: " . $email . "\r\n"
             . "X-Mailer: PHP/" . phpversion());
