@@ -13,3 +13,23 @@ $(function(){
         }, 1000);
 	});
 });
+
+function validarDatosEnvio(){
+	var nadaVacio = true
+	if (!$.trim($('#input-nombre').val())){
+		nadaVacio = false;
+	}
+	if (!$.trim($('#input-celular').val())){
+		nadaVacio = false;
+	}
+	if (!$.trim($('#input-direccion').val())){
+		nadaVacio = false;
+	}
+	if(!$('#input-edad').is(":checked")){
+		nadaVacio = false;
+	}
+	if(!nadaVacio){
+		alert('Debe completar todos los campos');
+	}
+	return nadaVacio;
+}

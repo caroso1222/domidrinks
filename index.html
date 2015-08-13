@@ -43,6 +43,7 @@
       <div class = "div-upper-bar">
         <div class = "row">
           <div class = "col-xs-6">
+            <img src="img/icon-total.png" class = "img-total">
             <span class = "brand-title">Domidrinks</span>
           </div>
           <div class = "col-xs-6 div-total">
@@ -144,21 +145,23 @@
             <div class="panel-body">
               <div class = "content-inputs">
                 <div class = "row">
+                  <form method = "get" action="contact.php" onsubmit="return validarDatosEnvio()">
                   <div class = "col-xs-12">
-                    <input type = "text" class = "form-control simplebox input-terminar" placeholder="Nombre">
-                    <input type = "text" class = "form-control simplebox input-terminar" placeholder="Celular">
-                    <input type = "text" class = "form-control simplebox input-terminar" placeholder="Dirección">
+                    <input type = "text" class = "form-control simplebox input-terminar" placeholder="Nombre" id = "input-nombre" name = "name">
+                    <input type = "text" class = "form-control simplebox input-terminar" placeholder="Celular" id = "input-celular" name = "cel">
+                    <input type = "text" class = "form-control simplebox input-terminar" placeholder="Dirección" id = "input-direccion" name = "address">
                   </div>
                   <div class = "col-xs-12">
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox"> Soy mayor de edad
+                        <input type="checkbox" id = "input-edad"> Soy mayor de edad
                       </label>
                     </div>
                   </div>
                   <div class = "col-xs-12">
-                    <input type = "submit" method = "get" href="confirmacion.html" value = "Enviar" class = "form-control simplebox btn-enviar">
+                    <input type = "submit" value = "Enviar" class = "form-control simplebox btn-enviar" id = "btn-enviar-pedido">
                   </div>
+                  </form>
                 </div>
               </div>
             </div>
