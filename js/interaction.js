@@ -42,12 +42,13 @@ angular.module('domiapp', []).controller('domictrl', function($scope) {
 	{id:120, tipo:'Aguardiente', nombre:'Nectar Azul', tamanio:"Litro", titulo:"Litro", precio:35000 },
 
 	{id:130, tipo:'Cerveza', nombre:'Poker', tamanio:"Lata(s)", titulo:"Lata", precio:3000 },
-	{id:140, tipo:'Cerveza', nombre:'Aguila Light', tamanio:"Litro", titulo:"Lata", precio:3000 },
-	{id:150, tipo:'Cerveza', nombre:'Aguila', tamanio:"Botella de 750CC", titulo:"Lata", precio:3000 },
-	{id:160, tipo:'Cerveza', nombre:'Club Colombia Roja', tamanio:"Litro", titulo:"Lata", precio:3500 },
-	{id:170, tipo:'Cerveza', nombre:'Club Colombia Rubia', tamanio:"Botella de 750CC", titulo:"Lata", precio:3500 },
-	{id:180, tipo:'Cerveza', nombre:'Corona', tamanio:"Litro", titulo:"Lata", precio:5000 },
-	{id:190, tipo:'Cerveza', nombre:'Heineken', tamanio:"Botella de 750CC", titulo:"Lata", precio:5000 },
+	{id:140, tipo:'Cerveza', nombre:'Aguila Light', tamanio:"Lata(s)", titulo:"Lata", precio:3000 },
+	{id:150, tipo:'Cerveza', nombre:'Aguila', tamanio:"Lata(s)", titulo:"Lata", precio:3000 },
+	{id:160, tipo:'Cerveza', nombre:'Club Colombia Roja', tamanio:"Lata(s)", titulo:"Lata", precio:3500 },
+	{id:170, tipo:'Cerveza', nombre:'Club Colombia Rubia', tamanio:"Lata(s)", titulo:"Lata", precio:3500 },
+	{id:180, tipo:'Cerveza', nombre:'Corona', tamanio:"Lata(s)", titulo:"Lata", precio:5000 },
+	{id:190, tipo:'Cerveza', nombre:'Heineken', tamanio:"Lata(s)", titulo:"Lata", precio:5000 },
+	
 	{id:200, tipo:'Ginebra', nombre:'Bombay', tamanio:"Botella(s)", titulo:"Botella de 750CC", precio:120000 },
 	{id:210, tipo:'Ginebra', nombre:'Tanqueray', tamanio:"Botella(s)", titulo:"Botella de 750CC", precio:120000 },
 
