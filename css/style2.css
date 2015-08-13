@@ -445,11 +445,11 @@ a:focus {
 
 .btn-enviar{
   text-transform: uppercase;
-  color: #333;
+  color: #8FFF91;
   font-weight: 700;
   letter-spacing: 1px;
   font-size: 14px;
-  background-color: #8FFF91;
+  background-color: #333;
   padding-top: 10px;
   padding-bottom: 28px;
 }
@@ -500,4 +500,141 @@ a:focus {
 
 .gracias-confirmacion{
   margin-top: 100px;
+}
+
+.header{
+  background-image: url("../img/hero.jpg");
+      -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: -moz-none;
+    -o-user-select: none;
+    user-select: none;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+    background-repeat: no-repeat;
+    color: #fff;
+    text-align: center;
+    background-position: center center;
+    box-sizing: boder-box;
+    background-size: cover;
+}
+
+.soft-shadow:not(.inverse):after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.40);
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+}
+
+.hero-container {
+    position: relative;
+    z-index: 3;
+}
+
+@media only screen and (max-width: 767px){
+.header {
+    background-image: url('../img/hero-2.jpg');
+}
+}
+@media (max-width: 767px){
+  .hero-container {
+    height: 400px;
+}
+}
+
+@media (min-width: 768px){
+.hero-container {
+    height: 500px;
+}
+}
+
+.hero-wrapper{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 5%;
+    padding-right: 5%;
+    height: 100%;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.hero-text-div{
+    display: inline-block;
+    vertical-align: middle;
+    white-space: normal;
+}
+
+.domi-title{
+  display: block;
+  font-weight: 900;
+  font-size: 35px;
+  margin-top: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.hero-text-div h1{
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-top: 60px;
+}
+
+.hero-text-div h2{
+  font-size: 21px;
+  line-height: 6px;
+  text-transform: uppercase;
+
+  font-weight: 700;
+}
+
+.titulos{
+  margin-top: 50px;
+}
+
+
+.hr-title{
+  width: 40%;
+  height: 1px;
+  background-color: #fff;
+  border:none;
+  margin-top: 10px;
+}
+
+.slogan{
+  background-color: #fff;
+  color: #333;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 12px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.btn-empezar{
+  cursor: pointer;
+  background-color: #FC5F0A;
+  color: #fff;
+  border:none;
+  margin-top: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 14px;
+  padding-top: 8px;
 }
