@@ -80,8 +80,8 @@ else {
     );
 } 
 
+die(json_encode($result));
 header("Location: http://www.google.com/"); /* Redirect browser */
 exit();
 
-die(json_encode($result));
        
