@@ -15,6 +15,18 @@ angular.module('domiapp', []).controller('domictrl', function($scope) {
 
 	$scope.pedido = [];
 
+	$scope.tipos = [
+		{id:1,nombre:'Aguardiente'},
+		{id:2,nombre:'Cerveza'},
+		{id:3,nombre:'Ron'},
+		{id:4,nombre:'Whisky'},
+		{id:5,nombre:'Tequila'},
+		{id:6,nombre:'Vodka'},
+		{id:7,nombre:'Bebidas Sin Alcohol'},
+		{id:8,nombre:'Cigarrillos'},
+		{id:9,nombre:'Snacks'}
+	];
+
 	$scope.licores = [
 	{id:10, tipo:'Aguardiente', nombre:'Antioqueño', tamanio:"Botella de 750CC", precio:32000 },
 	{id:20, tipo:'Aguardiente', nombre:'Antioqueño', tamanio:"Litro", precio:42000 },
@@ -89,11 +101,11 @@ angular.module('domiapp', []).controller('domictrl', function($scope) {
 	{id:710, tipo:'Cigarrillos', nombre:'Green x 20', tamanio:"Botella de 750CC", precio:32000 },
 	{id:720, tipo:'Cigarrillos', nombre:'Beltmon x 20', tamanio:"Litro", precio:42000 },
 	{id:730, tipo:'Cigarrillos', nombre:'Kool Original x 20', tamanio:"Botella de 750CC", precio:32000 },
-	{id:740, tipo:'Snack', nombre:'De Todito BBQ 71g', tamanio:"Litro", precio:42000 },
-	{id:750, tipo:'Snack', nombre:'De Todito Natural 71g', tamanio:"Botella de 750CC", precio:32000 },
-	{id:760, tipo:'Snack', nombre:'Detodito Familiar', tamanio:"Litro", precio:42000 },
-	{id:770, tipo:'Snack', nombre:'Mani la Especial Natural', tamanio:"Botella de 750CC", precio:32000 },
-	{id:780, tipo:'Snack', nombre:'Doritos Familiar', tamanio:"Litro", precio:42000 }
+	{id:740, tipo:'Snacks', nombre:'De Todito BBQ 71g', tamanio:"Litro", precio:42000 },
+	{id:750, tipo:'Snacks', nombre:'De Todito Natural 71g', tamanio:"Botella de 750CC", precio:32000 },
+	{id:760, tipo:'Snacks', nombre:'Detodito Familiar', tamanio:"Litro", precio:42000 },
+	{id:770, tipo:'Snacks', nombre:'Mani la Especial Natural', tamanio:"Botella de 750CC", precio:32000 },
+	{id:780, tipo:'Snacks', nombre:'Doritos Familiar', tamanio:"Litro", precio:42000 }
 	];
 
 	$scope.decrease_cant = function(id){
@@ -148,10 +160,10 @@ angular.module('domiapp', []).controller('domictrl', function($scope) {
 		}
 	}
 
-	$scope.getWhiskys = function(){
+	$scope.getGroupLicores = function(tipoN){
 		var whiskys = [];
 		for (var i = 0; i < $scope.licores.length;i++){
-			if ($scope.licores[i].tipo == "Whisky"){
+			if ($scope.licores[i].tipo == tipoN){
 				whiskys.push($scope.licores[i]);
 			}
 		}
@@ -186,4 +198,5 @@ angular.module('domiapp', []).controller('domictrl', function($scope) {
 	$scope.numberWithCommas = function(x){
 		return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 	}
+
 });

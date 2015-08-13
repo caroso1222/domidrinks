@@ -40,7 +40,7 @@
             <span class = "fa fa-shopping-cart"></span>
           </div>
         </div>
-        <div class = "body-resumen" ng-repeat="item in pedido">
+        <div class = "body-resumen" ng-repeat="item in pedido | orderBy:'item.precio'">
           <span ng-show="cant_chivas>0" class = "item-resumen"> {{cant_chivas}} botella(s) de Chivas de $120.000</span>
           <span><b>{{item.cant}}</b> {{item.item.tamanio}} de <b>{{item.item.nombre}}</b> de ${{numberWithCommas(item.item.precio)}}</span>
         </div>
@@ -49,45 +49,26 @@
 
     <div class = "container" id = "main-container">
       <div class="panel-group" id="accordion">
-        <div class="panel panel-default">
-          <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" data-target="#collapseOne">
+        <div class="panel panel-default" ng-repeat = "item in tipos">
+          <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" data-target="#collapse-{{item.id}}">
             <div>
               <h4 class="panel-title">
                 <a class="accordion-toggle">
-                  Aguardiente
+                  {{item.nombre}}
                 </a>
               </h4>
             </div>
             <div class = "angle-down-icon">
               <span class = "fa fa-angle-down"></span>
             </div>
-          </div>
-          <div id="collapseOne" class="panel-collapse collapse">
-            <div class="panel-body">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-            </div>
-          </div>
-        </div>
-        <div class="panel panel-default">
-          <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" data-target="#collapseTwo">
-            <div>
-              <h4 class="panel-title">
-                <a class="accordion-toggle">
-                  Whiskey
-                </a>
-              </h4>
-            </div>
-            <div class = "angle-down-icon">
-              <span class = "fa fa-angle-down"></span>
-            </div>
-            <div class = "angle-cart-icon " ng-show = "getSumOfArray(getWhiskys())">
+            <div class = "angle-cart-icon " ng-show = "getSumOfArray(getGroupLicores(item.nombre))">
               <span class = "fa fa-shopping-cart"></span>
             </div>
           </div>
-          <div id="collapseTwo" class="panel-collapse collapse">
+          <div id="collapse-{{item.id}}" class="panel-collapse collapse">
             <div class="panel-body">
               <div class="panel-group" id = "accordion1"> 
-                <div class = "panel panel-default panel-trago" ng-repeat = "item in getWhiskys()">
+                <div class = "panel panel-default panel-trago" ng-repeat = "item in getGroupLicores(item.nombre) | orderBy:'precio'">
                   <div class = "panel-trago-title" data-toggle="collapse" data-parent="#accordion1" data-target="#collapse-1-{{item.id}}">
                     <div class = "panel-trago-title-div">
                       <a >{{item.nombre}}</a>
@@ -118,30 +99,14 @@
                     </div>
                   </div>
                 </div>
-
               </div>
             </div>
           </div>
         </div>
-        <div class="panel panel-default">
-          <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" data-target="#collapseThree">
-            <div>
-              <h4 class="panel-title">
-                <a class="accordion-toggle">
-                  Ron
-                </a>
-              </h4>
-            </div>
-            <div class = "angle-down-icon">
-              <span class = "fa fa-angle-down"></span>
-            </div>
-          </div>
-          <div id="collapseThree" class="panel-collapse collapse">
-            <div class="panel-body">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-            </div>
-          </div>
-        </div>
+
+
+
+
         <div class="panel panel-default panel-pedido">
           <div class="panel-heading panel-terminar-pedido" data-toggle="collapse" data-parent="#accordion" data-target="#collapseFour">
             <div>
