@@ -194,6 +194,7 @@ angular.module('domiapp', []).controller('domictrl', function($scope) {
 		for(var i = 0; i<$scope.pedido.length;i++){
 			suma = suma + $scope.pedido[i].item.precio*$scope.pedido[i].cant;
 		}
+		$('#input-pedido').val($scope.pedido);
 		return suma;
 	}
 
