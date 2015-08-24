@@ -27,19 +27,132 @@ angular.module('domiapp', []).controller('domictrl', function($scope) {
 		{id:9,nombre:'Snacks'}
 	];
 
+	$scope.licores2 = [
+		{ tipo:'Aguardiente', nombre:'Antioqueño',items:[
+				{
+					id:10, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:32000
+				},
+				{
+					id:20, tamanio:"Litro(s)", titulo:"Botella de 750CC",precio:42000
+				}
+			]
+		},
+		{tipo:'Aguardiente', nombre:'Antioqueño Sin Azucar',items:[
+				{
+					id:30, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:35000
+				},
+				{
+					id:40, tamanio:"Litro(s)", titulo:"Botella de 750CC",precio:48000
+				}
+			]
+		},
+		{tipo:'Aguardiente', nombre:'Cristal',items:[
+				{
+					id:50, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:25000
+				},
+				{
+					id:60, tamanio:"Litro(s)", titulo:"Botella de 750CC",precio:35000
+				}
+			]
+		},
+		{tipo:'Aguardiente', nombre:'Nectar Verde',items:[
+				{
+					id:70, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:20000
+				},
+				{
+					id:80, tamanio:"Litro(s)", titulo:"Botella de 750CC",precio:30000
+				}
+			]
+		},
+		{tipo:'Aguardiente', nombre:'Nectar Rojo',items:[
+				{
+					id:90, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:18000
+				},
+				{
+					id:100, tamanio:"Litro(s)", titulo:"Botella de 750CC",precio:23000
+				}
+			]
+		},
+		{tipo:'Aguardiente', nombre:'Nectar Azul',items:[
+				{
+					id:110, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:25000
+				},
+				{
+					id:120, tamanio:"Litro(s)", titulo:"Botella de 750CC",precio:35000
+				}
+			]
+		},
+
+		{tipo:'Cerveza', nombre:'Poker',items:[
+				{
+					id:130, tamanio:"Lata(s) de Cerveza", titulo:"Lata",precio:3000
+				}
+			]
+		},
+		{tipo:'Cerveza', nombre:'Aguila Light',items:[
+				{
+					id:130, tamanio:"Lata(s) de Cerveza", titulo:"Lata",precio:3000
+				}
+			]
+		},
+		{tipo:'Cerveza', nombre:'Aguila',items:[
+				{
+					id:130, tamanio:"Lata(s) de Cerveza", titulo:"Lata",precio:3000
+				}
+			]
+		},
+		{tipo:'Cerveza', nombre:'Club Colombia Roja',items:[
+				{
+					id:130, tamanio:"Lata(s) de Cerveza", titulo:"Lata",precio:3500
+				}
+			]
+		},
+		{tipo:'Cerveza', nombre:'Club Colombia Rubia',items:[
+				{
+					id:130, tamanio:"Lata(s) de Cerveza", titulo:"Lata",precio:3500
+				}
+			]
+		},
+		{tipo:'Cerveza', nombre:'Corona',items:[
+				{
+					id:130, tamanio:"Lata(s) de Cerveza", titulo:"Lata",precio:5000
+				}
+			]
+		},
+		{tipo:'Cerveza', nombre:'Heineken',items:[
+				{
+					id:130, tamanio:"Lata(s) de Cerveza", titulo:"Lata",precio:5000
+				}
+			]
+		},
+
+		{tipo:'Ginebra', nombre:'Bombay',items:[
+				{
+					id:130, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
+				}
+			]
+		},
+		{tipo:'Ginebra', nombre:'Tanqueray',items:[
+				{
+					id:130, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
+				}
+			]
+		},
+	]
+
 	$scope.licores = [
-	{id:10, tipo:'Aguardiente', nombre:'Antioqueño', tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:32000 },
-	{id:20, tipo:'Aguardiente', nombre:'Antioqueño', tamanio:"Litro", titulo:"Litro", precio:42000 },
-	{id:30, tipo:'Aguardiente', nombre:'Antioqueño Sin Azucar', tamanio:"Botella(s)", titulo:"Botella de 750CC", precio:35000 },
-	{id:40, tipo:'Aguardiente', nombre:'Antioqueño Sin Azucar', tamanio:"Litro", titulo:"Litro", precio:48000 },
-	{id:50, tipo:'Aguardiente', nombre:'Cristal', tamanio:"Botella(s)", titulo:"Botella de 750CC", precio:25000 },
-	{id:60, tipo:'Aguardiente', nombre:'Cristal', tamanio:"Litro", titulo:"Litro", precio:35000 },
-	{id:70, tipo:'Aguardiente', nombre:'Nectar Verde', tamanio:"Botella(s)", titulo:"Botella de 750CC", precio:20000 },
-	{id:80, tipo:'Aguardiente', nombre:'Nectar Verde', tamanio:"Litro", titulo:"Litro", precio:30000 },
-	{id:90, tipo:'Aguardiente', nombre:'Nectar Rojo', tamanio:"Botella(s)", titulo:"Botella de 750CC", precio:18000 },
-	{id:100, tipo:'Aguardiente', nombre:'Nectar Rojo', tamanio:"Litro", titulo:"Litro", precio:23000 },
-	{id:110, tipo:'Aguardiente', nombre:'Nectar Azul', tamanio:"Botella(s)", titulo:"Botella de 750CC", precio:25000 },
-	{id:120, tipo:'Aguardiente', nombre:'Nectar Azul', tamanio:"Litro", titulo:"Litro", precio:35000 },
+	{id:10, tipo:'Aguardiente', nombre:'Antioqueño (Botella)', tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:32000 },
+	{id:20, tipo:'Aguardiente', nombre:'Antioqueño (Litro)', tamanio:"Litro", titulo:"Litro", precio:42000 },
+	{id:30, tipo:'Aguardiente', nombre:'Antioqueño Sin Azucar (Botella)', tamanio:"Botella(s)", titulo:"Botella de 750CC", precio:35000 },
+	{id:40, tipo:'Aguardiente', nombre:'Antioqueño Sin Azucar (Litro)', tamanio:"Litro", titulo:"Litro", precio:48000 },
+	{id:50, tipo:'Aguardiente', nombre:'Cristal (Botella)', tamanio:"Botella(s)", titulo:"Botella de 750CC", precio:25000 },
+	{id:60, tipo:'Aguardiente', nombre:'Cristal (Litro)', tamanio:"Litro", titulo:"Litro", precio:35000 },
+	{id:70, tipo:'Aguardiente', nombre:'Nectar Verde (Botella)', tamanio:"Botella(s)", titulo:"Botella de 750CC", precio:20000 },
+	{id:80, tipo:'Aguardiente', nombre:'Nectar Verde (Litro)', tamanio:"Litro", titulo:"Litro", precio:30000 },
+	{id:90, tipo:'Aguardiente', nombre:'Nectar Rojo (Botella)', tamanio:"Botella(s)", titulo:"Botella de 750CC", precio:18000 },
+	{id:100, tipo:'Aguardiente', nombre:'Nectar Rojo (Litro)', tamanio:"Litro", titulo:"Litro", precio:23000 },
+	{id:110, tipo:'Aguardiente', nombre:'Nectar Azul (Botella)', tamanio:"Botella(s)", titulo:"Botella de 750CC", precio:25000 },
+	{id:120, tipo:'Aguardiente', nombre:'Nectar Azul (Litro)', tamanio:"Litro", titulo:"Litro", precio:35000 },
 
 	{id:130, tipo:'Cerveza', nombre:'Poker', tamanio:"Lata(s) de Cerveza", titulo:"Lata", precio:3000 },
 	{id:140, tipo:'Cerveza', nombre:'Aguila Light', tamanio:"Lata(s) de Cerveza", titulo:"Lata", precio:3000 },
