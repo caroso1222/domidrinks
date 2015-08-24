@@ -653,3 +653,14 @@ a:focus {
   height: auto;
   margin-top: -9px;
 }
+
+.credits{
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.credits span{
+  font-size: 10px;
+  display: block;
+  font-weight: 500;
+}
