@@ -9,7 +9,7 @@ $(function(){
 $(function(){
 	$('.btn-empezar').click(function(){
 		$('html,body').animate({
-          scrollTop: 400
+          scrollTop: 700
         }, 1000);
 	});
 });
