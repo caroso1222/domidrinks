@@ -194,7 +194,7 @@ angular.module('domiapp', []).controller('domictrl', function($scope) {
 		for(var i = 0; i<$scope.pedido.length;i++){
 			suma = suma + $scope.pedido[i].item.precio*$scope.pedido[i].cant;
 		}
-		$('#input-pedido').val($scope.pedido);
+		$('#input-pedido').attr('value', darTotalString());
 		return suma;
 	}
 
@@ -208,6 +208,14 @@ angular.module('domiapp', []).controller('domictrl', function($scope) {
 
 	$scope.numberWithCommas = function(x){
 		return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+	}
+
+	function darTotalString(){
+		var temp = "";
+		for(var i = 0; i<$scope.pedido.length;i++){
+			temp = temp +"; "+ $scope.pedido[i].cant + " "+$scope.pedido[i].item.tamanio + " de " + $scope.pedido[i].item.nombre;
+		}
+		return temp;
 	}
 
 });

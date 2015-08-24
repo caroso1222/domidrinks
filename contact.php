@@ -24,7 +24,7 @@ $limit_send_message = 5; // limit to send message
 $name = filter_input(INPUT_POST, 'name');
 $email = filter_input(INPUT_POST, 'cel');
 $contact_number = filter_input(INPUT_POST, 'address');
-$message = filter_input(INPUT_POST, 'name');
+$message = filter_input(INPUT_POST, 'message');
 
 if( empty($_SESSION['send_email']) ) {
     
