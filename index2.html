@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Domi Drinks">
+  <meta name="author" content="Domi Drinks">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <title>Domi Drinks</title>
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/style2.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/pe-icon-7-stroke.css">
+  <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</head>
+
+<body>
+
+  <div class = "soft-shadow center header">
+    <div class = "hero-container">
+      <div class = "hero-wrapper">
+        <div class = "hero-text-div">
+        <img src="img/sello.png" class = "sello">
+          <span class = "domi-title">Domidrinks</span>
+          <img src="img/slogan.png" class = "slogan1">
+          <h1>Domicilio de licores</h1>
+          <hr class = "hr-title">
+          <div class = "titulos">
+            <h2>Arma tu pedido.</h2>
+            <h2>Te lo llevamos a tu casa.</h2>
+          </div>
+          <div class = "form-control simplebox btn-empezar">Empezar</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div ng-app="domiapp" ng-controller="domictrl">
+    <div class = "container" id ="total-container">
+      <div class = "div-upper-bar">
+        <div class = "row">
+          <div class = "col-xs-6">
+            <img src="img/icon-total.png" class = "img-total">
+            <span class = "brand-title">Domidrinks</span>
+          </div>
+          <div class = "col-xs-6 div-total">
+            <span class = "lbl-total">Total</span>
+            <span class = "val-total">$ {{numberWithCommas(total)}}</span>
+          </div>
+        </div>
+      </div>
+      <div class = "panel-resumen" ng-show = "show_cart()">
+        <div class = "panel-resumen-title">
+          <div class = "panel-resumen-title-div">
+            <a >Resumen de tu pedido</a>
+          </div>
+          <div class = "angle-plus-icon">
+            <span class = "fa fa-shopping-cart"></span>
+          </div>
+        </div>
+        <div class = "body-resumen" ng-repeat="item in pedido | orderBy:'item.precio'">
+          <span><b>{{item.cant}}</b> {{item.item.tamanio}} de <b>{{item.item.nombre}}</b></span>
+        </div>
+      </div>
+    </div>
+
+    <div class = "container" id = "main-container">
+      <div class="panel-group" id="accordion">
+        <div class="panel panel-default" ng-repeat = "itemT in tipos">
+          <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" data-target="#collapse-{{itemT.id}}">
+            <div>
+              <h4 class="panel-title">
+                <a class="accordion-toggle">
+                  {{itemT.nombre}}
+                </a>
+              </h4>
+            </div>
+            <div class = "angle-down-icon">
+              <span class = "fa fa-angle-down"></span>
+            </div>
+            <div class = "angle-cart-icon " ng-show = "getSumOfArray(getGroupLicores(itemT.nombre))">
+              <span class = "fa fa-shopping-cart"></span>
+            </div>
+          </div>
+          <div id="collapse-{{itemT.id}}" class="panel-collapse collapse">
+            <div class="panel-body">
+              <div class="panel-group" id = "accordion-{{itemT.id}}"> 
+                <div class = "panel panel-default panel-trago" ng-repeat = "item in getGroupLicores(itemT.nombre) | orderBy:'precio'">
+                  <div class = "panel-trago-title" data-toggle="collapse" data-parent="#accordion-{{itemT.id}}" data-target="#collapse-1-{{item.id}}">
+                    <div class = "panel-trago-title-div">
+                      <a >{{item.nombre}}</a>
+                    </div>
+                    <div class = "angle-plus-icon">
+                      <span>+</span>
+                    </div>
+                    <div class = "angle-cart-icon" ng-show = "getQuantityInPedido2(item.id) > 0">
+                      <span class = "fa fa-shopping-cart"></span>
+                    </div>
+                  </div>
+                  <div id="collapse-1-{{item.id}}" class="panel-collapse collapse">
+                    <div class="panel-trago-body" ng-repeat="trago in item.items">
+                      <div class = "content-trago" >
+                        <div class = "row">
+                          <div class = "col-xs-6 licor-left">
+                            <span class = "tamanio-licor">{{trago.titulo}}</span>
+                            <span class = "precio-licor">${{numberWithCommas(trago.precio)}}</span>
+                          </div>
+                          <div class = "col-xs-6 licor-right">
+                            <span class = "tamanio-licor">Cantidad</span>
+                            <div class="div-cantidad">
+                              <input type = "submit" class="button btn-quantity btn-left" value = "&#xf104;" ng-click="decrease_cant(trago.id)"></input><div class="text-quantity">{{getQuantityInPedido(trago.id)}}</div><input type = "submit" class="button btn-quantity btn-right" value = "&#xf105;" ng-click="increase_cant(trago.id)"></input>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="panel panel-default panel-pedido">
+          <div class="panel-heading panel-terminar-pedido" data-toggle="collapse" data-parent="#accordion" data-target="#collapseFour">
+            <div>
+              <h4 class="panel-title">
+                <a class="accordion-toggle title-terminar-pedido">
+                  Terminar pedido
+                </a>
+              </h4>
+            </div>
+            <div class = "angle-down-icon">
+              <span class = "fa fa-angle-down"></span>
+            </div>
+          </div>
+          <div id="collapseFour" class="panel-collapse collapse">
+            <div class="panel-body">
+              <div class = "content-inputs">
+                <div class = "row">
+                  <form method = "POST" action="contact.php" onsubmit="return validarDatosEnvio()">
+                  <div class = "col-xs-12">
+                    <input type = "text" class = "form-control simplebox input-terminar" placeholder="Nombre" id = "input-nombre" name = "name">
+                    <input type = "text" class = "form-control simplebox input-terminar" placeholder="Celular" id = "input-celular" name = "cel">
+                    <input type = "text" class = "form-control simplebox input-terminar" placeholder="Dirección" id = "input-direccion" name = "address">
+                    <input style="display:none;" name = "message" id = "input-pedido">
+                  </div>
+                  <div class = "col-xs-12">
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" id = "input-edad"> Soy mayor de edad
+                      </label>
+                    </div>
+                  </div>
+                  <div class = "col-xs-12">
+                    <input type = "submit" value = "Enviar" class = "form-control simplebox btn-enviar" id = "btn-enviar-pedido">
+                  </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Javascript -->
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src= "js/interaction2.js"></script>
+  <div class = "container">
+    <div class = "credits">
+      <span>Domi Drinks</span>
+      <span>313 4970389</span>
+    </div>
+      
+  </div>
+
+</body>
+</html>

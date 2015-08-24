@@ -28,99 +28,99 @@ angular.module('domiapp', []).controller('domictrl', function($scope) {
 	];
 
 	$scope.licores2 = [
-		{ tipo:'Aguardiente', nombre:'Antioqueño',items:[
+		{id:10, tipo:'Aguardiente', nombre:'Antioqueño',items:[
 				{
 					id:10, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:32000
 				},
 				{
-					id:20, tamanio:"Litro(s)", titulo:"Botella de 750CC",precio:42000
+					id:20, tamanio:"Litro(s)", titulo:"Litro",precio:42000
 				}
 			]
 		},
-		{id:10, tipo:'Aguardiente', nombre:'Antioqueño Sin Azucar',items:[
+		{id:20, tipo:'Aguardiente', nombre:'Antioqueño Sin Azucar',items:[
 				{
 					id:30, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:35000
 				},
 				{
-					id:40, tamanio:"Litro(s)", titulo:"Botella de 750CC",precio:48000
+					id:40, tamanio:"Litro(s)", titulo:"Litro",precio:48000
 				}
 			]
 		},
-		{id:10, tipo:'Aguardiente', nombre:'Cristal',items:[
+		{id:30, tipo:'Aguardiente', nombre:'Cristal',items:[
 				{
 					id:50, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:25000
 				},
 				{
-					id:60, tamanio:"Litro(s)", titulo:"Botella de 750CC",precio:35000
+					id:60, tamanio:"Litro(s)", titulo:"Litro",precio:35000
 				}
 			]
 		},
-		{id:10, tipo:'Aguardiente', nombre:'Nectar Verde',items:[
+		{id:40, tipo:'Aguardiente', nombre:'Nectar Verde',items:[
 				{
 					id:70, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:20000
 				},
 				{
-					id:80, tamanio:"Litro(s)", titulo:"Botella de 750CC",precio:30000
+					id:80, tamanio:"Litro(s)", titulo:"Litro",precio:30000
 				}
 			]
 		},
-		{id:10, tipo:'Aguardiente', nombre:'Nectar Rojo',items:[
+		{id:50, tipo:'Aguardiente', nombre:'Nectar Rojo',items:[
 				{
 					id:90, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:18000
 				},
 				{
-					id:100, tamanio:"Litro(s)", titulo:"Botella de 750CC",precio:23000
+					id:100, tamanio:"Litro(s)", titulo:"Litro",precio:23000
 				}
 			]
 		},
-		{id:10, tipo:'Aguardiente', nombre:'Nectar Azul',items:[
+		{id:60, tipo:'Aguardiente', nombre:'Nectar Azul',items:[
 				{
 					id:110, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:25000
 				},
 				{
-					id:120, tamanio:"Litro(s)", titulo:"Botella de 750CC",precio:35000
+					id:120, tamanio:"Litro(s)", titulo:"Litro",precio:35000
 				}
 			]
 		},
 
 
-		{id:10, tipo:'Cerveza', nombre:'Poker',items:[
+		{id:70, tipo:'Cerveza', nombre:'Poker',items:[
 				{
 					id:130, tamanio:"Lata(s) de Cerveza", titulo:"Lata",precio:3000
 				}
 			]
 		},
-		{id:10, tipo:'Cerveza', nombre:'Aguila Light',items:[
+		{id:80, tipo:'Cerveza', nombre:'Aguila Light',items:[
 				{
 					id:140, tamanio:"Lata(s) de Cerveza", titulo:"Lata",precio:3000
 				}
 			]
 		},
-		{id:10, tipo:'Cerveza', nombre:'Aguila',items:[
+		{id:90, tipo:'Cerveza', nombre:'Aguila',items:[
 				{
 					id:150, tamanio:"Lata(s) de Cerveza", titulo:"Lata",precio:3000
 				}
 			]
 		},
-		{id:10, tipo:'Cerveza', nombre:'Club Colombia Roja',items:[
+		{id:100, tipo:'Cerveza', nombre:'Club Colombia Roja',items:[
 				{
 					id:160, tamanio:"Lata(s) de Cerveza", titulo:"Lata",precio:3500
 				}
 			]
 		},
-		{id:10, tipo:'Cerveza', nombre:'Club Colombia Rubia',items:[
+		{id:110, tipo:'Cerveza', nombre:'Club Colombia Rubia',items:[
 				{
 					id:170, tamanio:"Lata(s) de Cerveza", titulo:"Lata",precio:3500
 				}
 			]
 		},
-		{id:10, tipo:'Cerveza', nombre:'Corona',items:[
+		{id:120, tipo:'Cerveza', nombre:'Corona',items:[
 				{
 					id:180, tamanio:"Lata(s) de Cerveza", titulo:"Lata",precio:5000
 				}
 			]
 		},
-		{id:10, tipo:'Cerveza', nombre:'Heineken',items:[
+		{id:130, tipo:'Cerveza', nombre:'Heineken',items:[
 				{
 					id:190, tamanio:"Lata(s) de Cerveza", titulo:"Lata",precio:5000
 				}
@@ -128,13 +128,13 @@ angular.module('domiapp', []).controller('domictrl', function($scope) {
 		},
 
 
-		{id:10, tipo:'Ginebra', nombre:'Bombay',items:[
+		{id:140, tipo:'Ginebra', nombre:'Bombay',items:[
 				{
 					id:200, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
 				}
 			]
 		},
-		{id:10, tipo:'Ginebra', nombre:'Tanqueray',items:[
+		{id:150, tipo:'Ginebra', nombre:'Tanqueray',items:[
 				{
 					id:210, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
 				}
@@ -142,37 +142,37 @@ angular.module('domiapp', []).controller('domictrl', function($scope) {
 		},
 
 
-		{id:10, tipo:'Ron', nombre:'Bacardí Limón',items:[
+		{id:160, tipo:'Ron', nombre:'Bacardí Limón',items:[
 				{
 					id:220, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
 				}
 			]
 		},
-		{id:10, tipo:'Ron', nombre:'Bacardí Limón Mojito',items:[
+		{id:170, tipo:'Ron', nombre:'Bacardí Limón Mojito',items:[
 				{
 					id:230, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
 				}
 			]
 		},
-		{id:10, tipo:'Ron', nombre:'Zacapa Solera Reserva 15 Años',items:[
+		{id:180, tipo:'Ron', nombre:'Zacapa Solera Reserva 15 Años',items:[
 				{
 					id:240, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
 				}
 			]
 		},
-		{id:10, tipo:'Ron', nombre:'Zacapa 23 Años',items:[
+		{id:190, tipo:'Ron', nombre:'Zacapa 23 Años',items:[
 				{
 					id:250, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
 				}
 			]
 		},
-		{id:10, tipo:'Ron', nombre:'Tres Esquinas Tradicional',items:[
+		{id:200, tipo:'Ron', nombre:'Tres Esquinas Tradicional',items:[
 				{
 					id:260, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
 				}
 			]
 		},
-		{id:10, tipo:'Ron', nombre:'Viejo Caldas',items:[
+		{id:210, tipo:'Ron', nombre:'Viejo Caldas',items:[
 				{
 					id:270, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
 				},
@@ -181,7 +181,7 @@ angular.module('domiapp', []).controller('domictrl', function($scope) {
 				}
 			]
 		},
-		{id:10, tipo:'Ron', nombre:'Santafé',items:[
+		{id:220, tipo:'Ron', nombre:'Santafé',items:[
 				{
 					id:290, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
 				},
@@ -190,7 +190,7 @@ angular.module('domiapp', []).controller('domictrl', function($scope) {
 				}
 			]
 		},
-		{id:10, tipo:'Ron', nombre:'Medellín Añejo',items:[
+		{id:230, tipo:'Ron', nombre:'Medellín Añejo',items:[
 				{
 					id:310, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
 				},
@@ -199,13 +199,13 @@ angular.module('domiapp', []).controller('domictrl', function($scope) {
 				}
 			]
 		},
-		{id:10, tipo:'Ron', nombre:'Havana Club Añejo',items:[
+		{id:240, tipo:'Ron', nombre:'Havana Club Añejo',items:[
 				{
 					id:330, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
 				}
 			]
 		},
-		{id:10, tipo:'Ron', nombre:'Havana Club Clásico',items:[
+		{id:250, tipo:'Ron', nombre:'Havana Club Clásico',items:[
 				{
 					id:340, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
 				}
@@ -213,79 +213,79 @@ angular.module('domiapp', []).controller('domictrl', function($scope) {
 		},
 
 
-		{id:10, tipo:'Whisky', nombre:"Buchanan's (12 Años)",items:[
+		{id:260, tipo:'Whisky', nombre:"Buchanan's (12 Años)",items:[
 				{
 					id:350, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
 				}
 			]
 		},
-		{id:10, tipo:'Whisky', nombre:"Buchanan's Master",items:[
+		{id:270, tipo:'Whisky', nombre:"Buchanan's Master",items:[
 				{
 					id:360, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
 				}
 			]
 		},
-		{id:10, tipo:'Whisky', nombre:"Buchanan's (18 Años)",items:[
+		{id:280, tipo:'Whisky', nombre:"Buchanan's (18 Años)",items:[
 				{
 					id:370, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
 				}
 			]
 		},
-		{id:10, tipo:'Whisky', nombre:"Grant's Family",items:[
+		{id:290, tipo:'Whisky', nombre:"Grant's Family",items:[
 				{
 					id:380, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
 				}
 			]
 		},
-		{id:10, tipo:'Whisky', nombre:"Old Parr Superior",items:[
+		{id:300, tipo:'Whisky', nombre:"Old Parr Superior",items:[
 				{
 					id:390, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
 				}
 			]
 		},
-		{id:10, tipo:'Whisky', nombre:"Old Parr Tribute",items:[
+		{id:310, tipo:'Whisky', nombre:"Old Parr Tribute",items:[
 				{
 					id:400, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
 				}
 			]
 		},
-		{id:10, tipo:'Whisky', nombre:"Old Parr (12 Años)",items:[
+		{id:320, tipo:'Whisky', nombre:"Old Parr (12 Años)",items:[
 				{
 					id:410, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
 				}
 			]
 		},
-		{id:10, tipo:'Whisky', nombre:"Jhonnie Walker (Sello Negro)",items:[
+		{id:330, tipo:'Whisky', nombre:"Jhonnie Walker (Sello Negro)",items:[
 				{
 					id:420, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
 				}
 			]
 		},
-		{id:10, tipo:'Whisky', nombre:"Jhonnie Walker (Sello Rojo)",items:[
+		{id:340, tipo:'Whisky', nombre:"Jhonnie Walker (Sello Rojo)",items:[
 				{
 					id:430, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
 				}
 			]
 		},
-		{id:10, tipo:'Whisky', nombre:"Something Special",items:[
+		{id:350, tipo:'Whisky', nombre:"Something Special",items:[
 				{
 					id:440, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
 				}
 			]
 		},
-		{id:10, tipo:'Whisky', nombre:"Chivas Regal (12 Años)",items:[
+		{id:360, tipo:'Whisky', nombre:"Chivas Regal (12 Años)",items:[
 				{
 					id:450, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
 				}
 			]
 		},
-		{id:10, tipo:'Whisky', nombre:"Chivas Regal (18 Años)",items:[
+		{id:370, tipo:'Whisky', nombre:"Chivas Regal (18 Años)",items:[
 				{
 					id:460, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
 				}
 			]
 		},
-		{id:10, tipo:'Whisky', nombre:"Jack Daniel's",items:[
+		{id:380, tipo:'Whisky', nombre:"Jack Daniel's",items:[
 				{
 					id:470, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
 				}
@@ -293,25 +293,25 @@ angular.module('domiapp', []).controller('domictrl', function($scope) {
 		},
 
 
-		{id:10, tipo:'Tequila', nombre:"Don Julio Reposado",items:[
+		{id:390, tipo:'Tequila', nombre:"Don Julio Reposado",items:[
 				{
 					id:480, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
 				}
 			]
 		},
-		{id:10, tipo:'Tequila', nombre:"Don Julio Blanco",items:[
+		{id:400, tipo:'Tequila', nombre:"Don Julio Blanco",items:[
 				{
 					id:490, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
 				}
 			]
 		},
-		{id:10, tipo:'Tequila', nombre:"José Cuervo",items:[
+		{id:410, tipo:'Tequila', nombre:"José Cuervo",items:[
 				{
 					id:500, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
 				}
 			]
 		},
-		{id:10, tipo:'Tequila', nombre:"José Cuero Silver",items:[
+		{id:420, tipo:'Tequila', nombre:"José Cuero Silver",items:[
 				{
 					id:510, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
 				}
@@ -319,19 +319,19 @@ angular.module('domiapp', []).controller('domictrl', function($scope) {
 		},
 
 
-		{id:10, tipo:'Vodka', nombre:"Vodka Absolut",items:[
+		{id:430, tipo:'Vodka', nombre:"Vodka Absolut",items:[
 				{
 					id:520, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
 				}
 			]
 		},
-		{id:10, tipo:'Vodka', nombre:"Smirnoff Ice",items:[
+		{id:440, tipo:'Vodka', nombre:"Smirnoff Ice",items:[
 				{
 					id:530, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
 				}
 			]
 		},
-		{id:10, tipo:'Vodka', nombre:"Smirnoff Red",items:[
+		{id:450, tipo:'Vodka', nombre:"Smirnoff Red",items:[
 				{
 					id:540, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
 				}
@@ -340,7 +340,7 @@ angular.module('domiapp', []).controller('domictrl', function($scope) {
 	]
 
 	$scope.licores = [
-	{id:10, tipo:'Aguardiente', nombre:'Antioqueño (Botella)', tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:32000 },
+	{id:10, tipo:'Aguardiente', nombre:'Antioqueño', tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:32000 },
 	{id:20, tipo:'Aguardiente', nombre:'Antioqueño (Litro)', tamanio:"Litro", titulo:"Litro", precio:42000 },
 	{id:30, tipo:'Aguardiente', nombre:'Antioqueño Sin Azucar (Botella)', tamanio:"Botella(s)", titulo:"Botella de 750CC", precio:35000 },
 	{id:40, tipo:'Aguardiente', nombre:'Antioqueño Sin Azucar (Litro)', tamanio:"Litro", titulo:"Litro", precio:48000 },
@@ -475,21 +475,43 @@ angular.module('domiapp', []).controller('domictrl', function($scope) {
 	}
 
 	$scope.getLicor = function(id){
-		for(var i = 0; i<$scope.licores.length; i++){
-			if($scope.licores[i].id == id){
-				return $scope.licores[i];
+		for(var i = 0; i<$scope.licores2.length; i++){
+			for(var j = 0; j<$scope.licores2[i].items.length; j++){	
+				if($scope.licores2[i].items[j].id == id){
+					return {id:id, tipo:$scope.licores2[i].tipo, nombre:$scope.licores2[i].nombre, tamanio:$scope.licores2[i].items[j].tamanio, titulo:$scope.licores2[i].items[j].titulo,precio:$scope.licores2[i].items[j].precio };
+				}
 			}
 		}
 	}
 
 	$scope.getGroupLicores = function(tipoN){
 		var whiskys = [];
-		for (var i = 0; i < $scope.licores.length;i++){
-			if ($scope.licores[i].tipo == tipoN){
-				whiskys.push($scope.licores[i]);
+		for (var i = 0; i < $scope.licores2.length;i++){
+			if ($scope.licores2[i].tipo == tipoN){
+				whiskys.push($scope.licores2[i]);
 			}
 		}
 		return whiskys;
+	}
+
+	$scope.getQuantityInPedido2 = function(id){
+		var losIds = [];
+		for(var i = 0; i < $scope.licores2.length; i++){
+			if($scope.licores2[i].id == id){
+				for(var j = 0; j < $scope.licores2[i].items.length; j++){
+					losIds.push($scope.licores2[i].items[j].id);
+				}
+			}
+		}
+		var suma = 0;
+		for(var i = 0; i < $scope.pedido.length; i++){
+			for(var j = 0; j < losIds.length ; j++){
+				if($scope.pedido[i].item.id == losIds[j]){
+					suma = suma + $scope.pedido[i].cant;
+				}
+			}
+		}
+		return suma;
 	}
 
 	$scope.getQuantityInPedido = function(id){
