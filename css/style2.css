@@ -445,13 +445,17 @@ a:focus {
 
 .btn-enviar{
   text-transform: uppercase;
-  color: #8FFF91;
+  color: #fff;
   font-weight: 700;
   letter-spacing: 1px;
   font-size: 14px;
-  background-color: #333;
+  background-color: #4584d8;
   padding-top: 10px;
   padding-bottom: 28px;
+}
+
+.btn-enviar:hover{
+  background-color: #3C5475;
 }
 
 #confirmacion-container{
@@ -672,4 +676,36 @@ a:focus {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+}
+
+.hero-text-div h3 {
+  font-size: 13px;
+  margin-top: -8px;
+}
+
+.exceso-div{
+  background-color: #333;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  color: white;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.panel-default:nth-child(1) >.panel-heading{
+    color: #fff;
+    background-color: #F24F2E;
+    border-color: #ddd;
+}
+
+.panel-default:nth-child(1) >.panel-heading a{
+    font-weight: 700;
+}
+
+
+.panel-default:nth-child(1) >.panel-heading[aria-expanded="true"]{
+    color: #fff;
+    background-color: #ED320C;
+    border-color: #ddd;
 }

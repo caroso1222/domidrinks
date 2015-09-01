@@ -28,6 +28,7 @@
           <img src="img/slogan.png" class = "slogan1">
           <h1>Domicilio de licores</h1>
           <hr class = "hr-title">
+          <h3>Disponible solo en <b>Bogotá</b></h3>
           <div class = "titulos">
             <h2>Arma tu pedido.</h2>
             <h2>Te lo llevamos a tu casa.</h2>
@@ -62,7 +63,6 @@
           </div>
         </div>
         <div class = "body-resumen" ng-repeat="item in pedido | orderBy:'item.precio'">
-          <span ng-show="cant_chivas>0" class = "item-resumen"> {{cant_chivas}} botella(s) de Chivas de $120.000</span>
           <span><b>{{item.cant}}</b> {{item.item.tamanio}} de <b>{{item.item.nombre}}</b></span>
         </div>
       </div>
@@ -97,22 +97,22 @@
                     <div class = "angle-plus-icon">
                       <span>+</span>
                     </div>
-                    <div class = "angle-cart-icon" ng-show = "getQuantityInPedido(item.id) > 0">
+                    <div class = "angle-cart-icon" ng-show = "getQuantityInPedido2(item.id) > 0">
                       <span class = "fa fa-shopping-cart"></span>
                     </div>
                   </div>
                   <div id="collapse-1-{{item.id}}" class="panel-collapse collapse">
-                    <div class="panel-trago-body">
-                      <div class = "content-trago">
+                    <div class="panel-trago-body" ng-repeat="trago in item.items">
+                      <div class = "content-trago" >
                         <div class = "row">
                           <div class = "col-xs-6 licor-left">
-                            <span class = "tamanio-licor">{{item.titulo}}</span>
-                            <span class = "precio-licor">${{numberWithCommas(item.precio)}}</span>
+                            <span class = "tamanio-licor">{{trago.titulo}}</span>
+                            <span class = "precio-licor">${{numberWithCommas(trago.precio)}}</span>
                           </div>
                           <div class = "col-xs-6 licor-right">
                             <span class = "tamanio-licor">Cantidad</span>
                             <div class="div-cantidad">
-                              <input type = "submit" class="button btn-quantity btn-left" value = "&#xf104;" ng-click="decrease_cant(item.id)"></input><div class="text-quantity">{{getQuantityInPedido(item.id)}}</div><input type = "submit" class="button btn-quantity btn-right" value = "&#xf105;" ng-click="increase_cant(item.id)"></input>
+                              <input type = "submit" class="button btn-quantity btn-left" value = "&#xf104;" ng-click="decrease_cant(trago.id)"></input><div class="text-quantity">{{getQuantityInPedido(trago.id)}}</div><input type = "submit" class="button btn-quantity btn-right" value = "&#xf105;" ng-click="increase_cant(trago.id)"></input>
                             </div>
                           </div>
                         </div>
@@ -151,6 +151,7 @@
                     <input type = "text" class = "form-control simplebox input-terminar" placeholder="Celular" id = "input-celular" name = "cel">
                     <input type = "text" class = "form-control simplebox input-terminar" placeholder="Dirección" id = "input-direccion" name = "address">
                     <input style="display:none;" name = "message" id = "input-pedido">
+                    <input style="display:none;" name = "total" id = "input-total" value = "0">
                   </div>
                   <div class = "col-xs-12">
                     <div class="checkbox">
@@ -176,13 +177,17 @@
   <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/script.js"></script>
-  <script src= "js/interaction.js"></script>
+  <script src= "js/interaction2.js"></script>
   <div class = "container">
     <div class = "credits">
       <span>Domi Drinks</span>
       <span>313 4970389</span>
     </div>
       
+  </div>
+
+  <div class = "container-fluid exceso-div">
+    <span>Prohíbase el expendio de bebidas embriagantes a menores de edad, Ley 124 de 1994. El exceso de alcohol es perjudicial para la salud, Ley 30 de 1986.</span>
   </div>
 
 </body>

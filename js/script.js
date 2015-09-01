@@ -15,6 +15,11 @@ $(function(){
 });
 
 function validarDatosEnvio(){
+
+	if(parseInt($('#input-total').val())<50000){
+		alert('El pedido debe ser mínimo de 50.000 pesos.');
+		return false;
+	}
 	var nadaVacio = true
 	if (!$.trim($('#input-nombre').val())){
 		nadaVacio = false;

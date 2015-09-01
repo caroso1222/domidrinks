@@ -16,18 +16,47 @@ angular.module('domiapp', []).controller('domictrl', function($scope) {
 	$scope.pedido = [];
 
 	$scope.tipos = [
+		{id:0,nombre:'Promociones'},
 		{id:1,nombre:'Aguardiente'},
 		{id:2,nombre:'Cerveza'},
 		{id:3,nombre:'Ron'},
 		{id:4,nombre:'Whisky'},
 		{id:5,nombre:'Tequila'},
 		{id:6,nombre:'Vodka'},
-		{id:7,nombre:'Bebidas Sin Alcohol'},
-		{id:8,nombre:'Cigarrillos'},
-		{id:9,nombre:'Snacks'}
+		{id:7,nombre:'Otros'},
+		{id:8,nombre:'Bebidas Sin Alcohol'},
+		{id:9,nombre:'Cigarrillos'},
+		{id:10,nombre:'Snacks'}
 	];
 
 	$scope.licores2 = [
+		{id:01, tipo:'Promociones', nombre:'Jhonnie Walker (Sello Rojo)/3 cervezas/Trident',items:[
+				{
+					id:01, tamanio:"Promoción(es)", titulo:"Botella 750CC/Lata/Paquete",precio:32000
+				}
+			]
+		},
+		{id:02, tipo:'Promociones', nombre:'Oldparr (12 Años)/ 2 botellas Agua tonica',items:[
+				{
+					id:02, tamanio:"Promoción(es)", titulo:"Botella 750CC/Botella 300CC",precio:35000
+				}
+			]
+		},
+		{id:03, tipo:'Promociones', nombre:'Vodka Absolut/Jugo del Valle',items:[
+				{
+					id:03, tamanio:"Promoción(es)", titulo:"Botella 750CC/Botella 1.75L",precio:25000
+				}
+			]
+		},
+		{id:04, tipo:'Promociones', nombre:'Jose Cuervo/Ginger Ale',items:[
+				{
+					id:04, tamanio:"Promoción(es)", titulo:"Botella 750CC/Botella 1.5L",precio:20000
+				}
+			]
+		},
+
+
+
 		{id:10, tipo:'Aguardiente', nombre:'Antioqueño',items:[
 				{
 					id:10, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:32000
@@ -336,7 +365,160 @@ angular.module('domiapp', []).controller('domictrl', function($scope) {
 					id:540, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
 				}
 			]
+		},
+
+
+		{id:460, tipo:'Otros', nombre:"Brandy Domeq",items:[
+				{
+					id:550, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
+				}
+			]
+		},
+		{id:470, tipo:'Otros', nombre:"Baylie's",items:[
+				{
+					id:560, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
+				}
+			]
+		},
+
+
+		{id:480, tipo:'Bebidas Sin Alcohol', nombre:"Red Bull Energizante",items:[
+				{
+					id:570, tamanio:"Lata(s)", titulo:"Lata",precio:120000
+				}
+			]
+		},
+		{id:490, tipo:'Bebidas Sin Alcohol', nombre:"Agua Natural Domi Drinks",items:[
+				{
+					id:580, tamanio:"Botella(s)", titulo:"Botella",precio:120000
+				}
+			]
+		},
+		{id:500, tipo:'Bebidas Sin Alcohol', nombre:"Agua Con Gas Domi Drinks",items:[
+				{
+					id:590, tamanio:"Botella(s)", titulo:"Botella",precio:120000
+				}
+			]
+		},
+		{id:510, tipo:'Bebidas Sin Alcohol', nombre:"Agua Tónica 300 CC",items:[
+				{
+					id:600, tamanio:"Botella(s)", titulo:"Botella de 300CC",precio:120000
+				}
+			]
+		},
+		{id:520, tipo:'Bebidas Sin Alcohol', nombre:"Ginger Ale",items:[
+				{
+					id:610, tamanio:"Botella(s)", titulo:"Botella de 1,5L",precio:120000
+				}
+			]
+		},
+		{id:530, tipo:'Bebidas Sin Alcohol', nombre:"Gaseosa Coca Cola",items:[
+				{
+					id:620, tamanio:"Botella(s)", titulo:"Botella de 1,5L",precio:120000
+				}
+			]
+		},
+		{id:540, tipo:'Bebidas Sin Alcohol', nombre:"Gaseosa Sprite",items:[
+				{
+					id:630, tamanio:"Botella(s)", titulo:"Botella de 1,5L",precio:120000
+				}
+			]
+		},
+		{id:550, tipo:'Bebidas Sin Alcohol', nombre:"Jugo del Valle",items:[
+				{
+					id:640, tamanio:"Botella(s)", titulo:"Botella de 1,75L",precio:120000
+				}
+			]
+		},
+		{id:560, tipo:'Bebidas Sin Alcohol', nombre:"Gatorade Tropical",items:[
+				{
+					id:650, tamanio:"Botella(s)", titulo:"Botella de 500ml",precio:120000
+				}
+			]
+		},
+		{id:570, tipo:'Bebidas Sin Alcohol', nombre:"Gatorade Mandarina",items:[
+				{
+					id:660, tamanio:"Botella(s)", titulo:"Botella de 500ml",precio:120000
+				}
+			]
+		},
+
+
+		{id:580, tipo:'Cigarrillos', nombre:"Mustang",items:[
+				{
+					id:670, tamanio:"Caja(s) de 20 Cigarrillos", titulo:"Caja de 20",precio:5500
+				}
+			]
+		},
+		{id:590, tipo:'Cigarrillos', nombre:"Marlboro Blue",items:[
+				{
+					id:680, tamanio:"Caja(s) de 20 Cigarrillos", titulo:"Caja de 20",precio:6500
+				}
+			]
+		},
+		{id:600, tipo:'Cigarrillos', nombre:"Marlboro Ice",items:[
+				{
+					id:690, tamanio:"Caja(s) de 20 Cigarrillos", titulo:"Caja de 20",precio:6500
+				}
+			]
+		},
+		{id:610, tipo:'Cigarrillos', nombre:"Marlboro Rojo",items:[
+				{
+					id:700, tamanio:"Caja(s) de 20 Cigarrillos", titulo:"Caja de 20",precio:6500
+				}
+			]
+		},
+		{id:620, tipo:'Cigarrillos', nombre:"Green",items:[
+				{
+					id:710, tamanio:"Caja(s) de 20 Cigarrillos", titulo:"Caja de 20",precio:5000
+				}
+			]
+		},
+		{id:630, tipo:'Cigarrillos', nombre:"Beltmon",items:[
+				{
+					id:720, tamanio:"Caja(s) de 20 Cigarrillos", titulo:"Caja de 20",precio:5000
+				}
+			]
+		},
+		{id:640, tipo:'Cigarrillos', nombre:"Kool Original",items:[
+				{
+					id:730, tamanio:"Caja(s) de 20 Cigarrillos", titulo:"Caja de 20",precio:6000
+				}
+			]
+		},
+
+
+		{id:650, tipo:'Snacks', nombre:"De Todito BBQ",items:[
+				{
+					id:740, tamanio:"Paquete(s)", titulo:"Paquete de 71g",precio:5500
+				}
+			]
+		},
+		{id:660, tipo:'Snacks', nombre:"De Todito Natural",items:[
+				{
+					id:750, tamanio:"Paquete(s)", titulo:"Paquete de 71g",precio:6500
+				}
+			]
+		},
+		{id:670, tipo:'Snacks', nombre:"Detodito Familiar",items:[
+				{
+					id:760, tamanio:"Paquete(s)", titulo:"Paquete",precio:6500
+				}
+			]
+		},
+		{id:680, tipo:'Snacks', nombre:"Mani la Especial Natural",items:[
+				{
+					id:770, tamanio:"Bolsa(s)", titulo:"Bolsa",precio:6500
+				}
+			]
+		},
+		{id:690, tipo:'Snacks', nombre:"Doritos Familiar",items:[
+				{
+					id:780, tamanio:"Paquete(s)", titulo:"Paquete de 71g",precio:6500
+				}
+			]
 		}
+
 	]
 
 	$scope.licores = [
@@ -529,6 +711,7 @@ angular.module('domiapp', []).controller('domictrl', function($scope) {
 			suma = suma + $scope.pedido[i].item.precio*$scope.pedido[i].cant;
 		}
 		$('#input-pedido').attr('value', darTotalString(suma));
+		$('#input-total').attr('value', suma);
 		return suma;
 	}
 
