@@ -30,27 +30,27 @@ angular.module('domiapp', []).controller('domictrl', function($scope) {
 	];
 
 	$scope.licores2 = [
-		{id:01, tipo:'Promociones', nombre:'Jhonnie Walker (Sello Rojo)/3 cervezas/Trident',items:[
+		{id:01, tipo:'Promociones', nombre:'Promo Johnnie Walker',items:[
 				{
-					id:01, tamanio:"Promoción(es)", titulo:"Botella 750CC/Lata/Paquete",precio:32000
+					id:01, tamanio:"Promoción(es)", titulo:"Jhonnie Walker (Sello Rojo)/3 cervezas/Trident",precio:74900
 				}
 			]
 		},
-		{id:02, tipo:'Promociones', nombre:'Oldparr (12 Años)/ 2 botellas Agua tonica',items:[
+		{id:02, tipo:'Promociones', nombre:'Promo Oldparr',items:[
 				{
-					id:02, tamanio:"Promoción(es)", titulo:"Botella 750CC/Botella 300CC",precio:35000
+					id:02, tamanio:"Promoción(es)", titulo:"Oldparr (12 Años)/ 2 botellas Agua tonica",precio:122000
 				}
 			]
 		},
-		{id:03, tipo:'Promociones', nombre:'Vodka Absolut/Jugo del Valle',items:[
+		{id:03, tipo:'Promociones', nombre:'Promo Vodka',items:[
 				{
-					id:03, tamanio:"Promoción(es)", titulo:"Botella 750CC/Botella 1.75L",precio:25000
+					id:03, tamanio:"Promoción(es)", titulo:"Vodka Absolut/Jugo del Valle",precio:70800
 				}
 			]
 		},
-		{id:04, tipo:'Promociones', nombre:'Jose Cuervo/Ginger Ale',items:[
+		{id:04, tipo:'Promociones', nombre:'Promo Jose Cuervo',items:[
 				{
-					id:04, tamanio:"Promoción(es)", titulo:"Botella 750CC/Botella 1.5L",precio:20000
+					id:04, tamanio:"Promoción(es)", titulo:"Jose Cuervo/Ginger Ale",precio:70500
 				}
 			]
 		},
