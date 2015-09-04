@@ -30,6 +30,12 @@ angular.module('domiapp', []).controller('domictrl', function($scope) {
 	];
 
 	$scope.licores2 = [
+		{id:00, tipo:'Promociones', nombre:'Promo Lanzamiento',items:[
+				{
+					id:01, tamanio:"Promoción(es)", titulo:"Red Label (750CC)/Redbull(250CC)",precio:50000
+				}
+			]
+		},
 		{id:01, tipo:'Promociones', nombre:'Promo Johnnie Walker',items:[
 				{
 					id:01, tamanio:"Promoción(es)", titulo:"Jhonnie Walker (Sello Rojo)/3 cervezas/Trident",precio:74900
