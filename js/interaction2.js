@@ -179,70 +179,70 @@ angular.module('domiapp', []).controller('domictrl', function($scope) {
 
 		{id:160, tipo:'Ron', nombre:'Bacardí Limón',items:[
 				{
-					id:220, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
+					id:220, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:53000
 				}
 			]
 		},
 		{id:170, tipo:'Ron', nombre:'Bacardí Limón Mojito',items:[
 				{
-					id:230, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
+					id:230, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:44000
 				}
 			]
 		},
 		{id:180, tipo:'Ron', nombre:'Zacapa Solera Reserva 15 Años',items:[
 				{
-					id:240, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
+					id:240, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:124000
 				}
 			]
 		},
 		{id:190, tipo:'Ron', nombre:'Zacapa 23 Años',items:[
 				{
-					id:250, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
+					id:250, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:150000
 				}
 			]
 		},
 		{id:200, tipo:'Ron', nombre:'Tres Esquinas Tradicional',items:[
 				{
-					id:260, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
+					id:260, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:36000
 				}
 			]
 		},
 		{id:210, tipo:'Ron', nombre:'Viejo Caldas',items:[
 				{
-					id:270, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
+					id:270, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:40000
 				},
 				{
-					id:280, tamanio:"Litro(s)", titulo:"Litro",precio:120000
+					id:280, tamanio:"Litro(s)", titulo:"Litro",precio:47000
 				}
 			]
 		},
 		{id:220, tipo:'Ron', nombre:'Santafé',items:[
 				{
-					id:290, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
+					id:290, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:25000
 				},
 				{
-					id:300, tamanio:"Litro(s)", titulo:"Litro",precio:120000
+					id:300, tamanio:"Litro(s)", titulo:"Litro",precio:32000
 				}
 			]
 		},
 		{id:230, tipo:'Ron', nombre:'Medellín Añejo',items:[
 				{
-					id:310, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
+					id:310, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:40000
 				},
 				{
-					id:320, tamanio:"Litro(s)", titulo:"Litro",precio:120000
+					id:320, tamanio:"Litro(s)", titulo:"Litro",precio:47000
 				}
 			]
 		},
 		{id:240, tipo:'Ron', nombre:'Havana Club Añejo',items:[
 				{
-					id:330, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
+					id:330, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:69000
 				}
 			]
 		},
 		{id:250, tipo:'Ron', nombre:'Havana Club Clásico',items:[
 				{
-					id:340, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
+					id:340, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:63000
 				}
 			]
 		},
@@ -256,31 +256,31 @@ angular.module('domiapp', []).controller('domictrl', function($scope) {
 		},
 		{id:270, tipo:'Whisky', nombre:"Buchanan's Master",items:[
 				{
-					id:360, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
+					id:360, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:135000
 				}
 			]
 		},
 		{id:280, tipo:'Whisky', nombre:"Buchanan's (18 Años)",items:[
 				{
-					id:370, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
+					id:370, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:230000
 				}
 			]
 		},
 		{id:290, tipo:'Whisky', nombre:"Grant's Family",items:[
 				{
-					id:380, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
+					id:380, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:65000
 				}
 			]
 		},
 		{id:300, tipo:'Whisky', nombre:"Old Parr Superior",items:[
 				{
-					id:390, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
+					id:390, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:220000
 				}
 			]
 		},
 		{id:310, tipo:'Whisky', nombre:"Old Parr Tribute",items:[
 				{
-					id:400, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
+					id:400, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:125000
 				}
 			]
 		},
@@ -292,37 +292,37 @@ angular.module('domiapp', []).controller('domictrl', function($scope) {
 		},
 		{id:330, tipo:'Whisky', nombre:"Jhonnie Walker (Sello Negro)",items:[
 				{
-					id:420, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
+					id:420, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:110000
 				}
 			]
 		},
 		{id:340, tipo:'Whisky', nombre:"Jhonnie Walker (Sello Rojo)",items:[
 				{
-					id:430, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
+					id:430, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:70000
 				}
 			]
 		},
 		{id:350, tipo:'Whisky', nombre:"Something Special",items:[
 				{
-					id:440, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
+					id:440, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:70000
 				}
 			]
 		},
 		{id:360, tipo:'Whisky', nombre:"Chivas Regal (12 Años)",items:[
 				{
-					id:450, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
+					id:450, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:125000
 				}
 			]
 		},
 		{id:370, tipo:'Whisky', nombre:"Chivas Regal (18 Años)",items:[
 				{
-					id:460, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
+					id:460, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:245000
 				}
 			]
 		},
 		{id:380, tipo:'Whisky', nombre:"Jack Daniel's",items:[
 				{
-					id:470, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
+					id:470, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:110000
 				}
 			]
 		},
@@ -330,25 +330,25 @@ angular.module('domiapp', []).controller('domictrl', function($scope) {
 
 		{id:390, tipo:'Tequila', nombre:"Don Julio Reposado",items:[
 				{
-					id:480, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
+					id:480, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:170000
 				}
 			]
 		},
 		{id:400, tipo:'Tequila', nombre:"Don Julio Blanco",items:[
 				{
-					id:490, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
+					id:490, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:160000
 				}
 			]
 		},
 		{id:410, tipo:'Tequila', nombre:"José Cuervo",items:[
 				{
-					id:500, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
+					id:500, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:70000
 				}
 			]
 		},
 		{id:420, tipo:'Tequila', nombre:"José Cuero Silver",items:[
 				{
-					id:510, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
+					id:510, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:70000
 				}
 			]
 		},
@@ -356,19 +356,19 @@ angular.module('domiapp', []).controller('domictrl', function($scope) {
 
 		{id:430, tipo:'Vodka', nombre:"Vodka Absolut",items:[
 				{
-					id:520, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
+					id:520, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:70000
 				}
 			]
 		},
 		{id:440, tipo:'Vodka', nombre:"Smirnoff Ice",items:[
 				{
-					id:530, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
+					id:530, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:7000
 				}
 			]
 		},
 		{id:450, tipo:'Vodka', nombre:"Smirnoff Red",items:[
 				{
-					id:540, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
+					id:540, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:70000
 				}
 			]
 		},
@@ -376,13 +376,13 @@ angular.module('domiapp', []).controller('domictrl', function($scope) {
 
 		{id:460, tipo:'Otros', nombre:"Brandy Domeq",items:[
 				{
-					id:550, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
+					id:550, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:45000
 				}
 			]
 		},
 		{id:470, tipo:'Otros', nombre:"Baylie's",items:[
 				{
-					id:560, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:120000
+					id:560, tamanio:"Botella(s)", titulo:"Botella de 750CC",precio:60000
 				}
 			]
 		},
@@ -390,61 +390,61 @@ angular.module('domiapp', []).controller('domictrl', function($scope) {
 
 		{id:480, tipo:'Bebidas Sin Alcohol', nombre:"Red Bull Energizante",items:[
 				{
-					id:570, tamanio:"Lata(s)", titulo:"Lata",precio:120000
+					id:570, tamanio:"Lata(s)", titulo:"Lata",precio:7500
 				}
 			]
 		},
 		{id:490, tipo:'Bebidas Sin Alcohol', nombre:"Agua Natural Domi Drinks",items:[
 				{
-					id:580, tamanio:"Botella(s)", titulo:"Botella",precio:120000
+					id:580, tamanio:"Botella(s)", titulo:"Botella",precio:2000
 				}
 			]
 		},
 		{id:500, tipo:'Bebidas Sin Alcohol', nombre:"Agua Con Gas Domi Drinks",items:[
 				{
-					id:590, tamanio:"Botella(s)", titulo:"Botella",precio:120000
+					id:590, tamanio:"Botella(s)", titulo:"Botella",precio:2200
 				}
 			]
 		},
 		{id:510, tipo:'Bebidas Sin Alcohol', nombre:"Agua Tónica 300 CC",items:[
 				{
-					id:600, tamanio:"Botella(s)", titulo:"Botella de 300CC",precio:120000
+					id:600, tamanio:"Botella(s)", titulo:"Botella de 300CC",precio:2200
 				}
 			]
 		},
 		{id:520, tipo:'Bebidas Sin Alcohol', nombre:"Ginger Ale",items:[
 				{
-					id:610, tamanio:"Botella(s)", titulo:"Botella de 1,5L",precio:120000
+					id:610, tamanio:"Botella(s)", titulo:"Botella de 1,5L",precio:4500
 				}
 			]
 		},
 		{id:530, tipo:'Bebidas Sin Alcohol', nombre:"Gaseosa Coca Cola",items:[
 				{
-					id:620, tamanio:"Botella(s)", titulo:"Botella de 1,5L",precio:120000
+					id:620, tamanio:"Botella(s)", titulo:"Botella de 1,5L",precio:4500
 				}
 			]
 		},
 		{id:540, tipo:'Bebidas Sin Alcohol', nombre:"Gaseosa Sprite",items:[
 				{
-					id:630, tamanio:"Botella(s)", titulo:"Botella de 1,5L",precio:120000
+					id:630, tamanio:"Botella(s)", titulo:"Botella de 1,5L",precio:4500
 				}
 			]
 		},
 		{id:550, tipo:'Bebidas Sin Alcohol', nombre:"Jugo del Valle",items:[
 				{
-					id:640, tamanio:"Botella(s)", titulo:"Botella de 1,75L",precio:120000
+					id:640, tamanio:"Botella(s)", titulo:"Botella de 1,75L",precio:5000
 				}
 			]
 		},
 		{id:560, tipo:'Bebidas Sin Alcohol', nombre:"Gatorade Tropical",items:[
 				{
-					id:650, tamanio:"Botella(s)", titulo:"Botella de 500ml",precio:120000
+					id:650, tamanio:"Botella(s)", titulo:"Botella de 500ml",precio:3500
 				}
 			]
 		},
 		{id:570, tipo:'Bebidas Sin Alcohol', nombre:"Gatorade Mandarina",items:[
 				{
-					id:660, tamanio:"Botella(s)", titulo:"Botella de 500ml",precio:120000
+					id:660, tamanio:"Botella(s)", titulo:"Botella de 500ml",precio:3500
 				}
 			]
 		},
@@ -496,31 +496,31 @@ angular.module('domiapp', []).controller('domictrl', function($scope) {
 
 		{id:650, tipo:'Snacks', nombre:"De Todito BBQ",items:[
 				{
-					id:740, tamanio:"Paquete(s)", titulo:"Paquete de 71g",precio:5500
+					id:740, tamanio:"Paquete(s)", titulo:"Paquete de 71g",precio:3000
 				}
 			]
 		},
 		{id:660, tipo:'Snacks', nombre:"De Todito Natural",items:[
 				{
-					id:750, tamanio:"Paquete(s)", titulo:"Paquete de 71g",precio:6500
+					id:750, tamanio:"Paquete(s)", titulo:"Paquete de 71g",precio:3000
 				}
 			]
 		},
 		{id:670, tipo:'Snacks', nombre:"Detodito Familiar",items:[
 				{
-					id:760, tamanio:"Paquete(s)", titulo:"Paquete",precio:6500
+					id:760, tamanio:"Paquete(s)", titulo:"Paquete",precio:5300
 				}
 			]
 		},
 		{id:680, tipo:'Snacks', nombre:"Mani la Especial Natural",items:[
 				{
-					id:770, tamanio:"Bolsa(s)", titulo:"Bolsa",precio:6500
+					id:770, tamanio:"Bolsa(s)", titulo:"Bolsa",precio:2000
 				}
 			]
 		},
 		{id:690, tipo:'Snacks', nombre:"Doritos Familiar",items:[
 				{
-					id:780, tamanio:"Paquete(s)", titulo:"Paquete de 71g",precio:6500
+					id:780, tamanio:"Paquete(s)", titulo:"Paquete de 71g",precio:5500
 				}
 			]
 		}
